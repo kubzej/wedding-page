@@ -1,7 +1,6 @@
 'use client';
 
 import type React from 'react';
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -11,7 +10,11 @@ import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import { toast } from '@/components/ui/use-toast';
 
-export default function RsvpForm() {
+interface RsvpFormProps {
+  onSubmit: () => void; // Callback to notify parent of successful submission
+}
+
+export default function RsvpForm({ onSubmit }: RsvpFormProps) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -41,36 +44,61 @@ export default function RsvpForm() {
     setFormData((prev) => ({ ...prev, preWeddingEvent: checked }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  async function handleSubmit(event: React.FormEvent) {
+    event.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      console.log('Form submitted:', formData);
-      toast({
-        title: 'RSVP odesláno',
-        description: 'Děkujeme za vaši odpověď!',
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          subject: 'Nové svatební RSVP',
+          text: `RSVP Details:
+Jméno: ${formData.name}
+Email: ${formData.email}
+Telefon: ${formData.phone}
+Účastním se?: ${
+            formData.attendance === 'yes'
+              ? 'Ano, s radostí přijdu'
+              : 'Ne, bohužel se nemohu zúčastnit'
+          }
+Počet doprovázejících dospělích: ${formData.guests}
+Počet dětí: ${formData.children}
+Diety: ${formData.dietaryRestrictions || 'None'}
+Zúčastním se pátečního eventu?: ${formData.preWeddingEvent ? 'Ano' : 'Ne'}
+Message: ${formData.message || 'No message'}`,
+          to: 'kubzej8@gmail.com',
+        }),
       });
-      setIsSubmitting(false);
 
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        attendance: 'yes',
-        guests: 0,
-        children: 0,
-        dietaryRestrictions: '',
-        preWeddingEvent: false,
-        message: '',
+      const result = await response.json();
+
+      if (result.success) {
+        toast({
+          title: 'RSVP odesláno',
+          description: 'Děkujeme za vaši odpověď!',
+        });
+        onSubmit(); // Notify parent of successful submission
+      } else {
+        throw new Error(result.error || 'Failed to send email');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      toast({
+        title: 'Chyba',
+        description: 'Nepodařilo se odeslat RSVP.',
       });
-    }, 1000);
-  };
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
+      {/* Form fields */}
       <div className="space-y-4">
         <div>
           <Label htmlFor="name" className="text-sm font-medium">

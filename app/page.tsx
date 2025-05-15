@@ -1,3 +1,6 @@
+'use client';
+
+import type React from 'react';
 import Image from 'next/image';
 import {
   MapPin,
@@ -21,8 +24,19 @@ import RsvpForm from '@/components/rsvp-form';
 import SeatingChart from '@/components/seating-chart';
 import CountdownTimer from '@/components/countdown-timer';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useEffect, useRef, useState } from 'react';
 
 export default function WeddingPage() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const thankYouCardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (isSubmitted && thankYouCardRef.current) {
+      thankYouCardRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [isSubmitted]);
+
   return (
     <div className="min-h-screen bg-[#f5ebe0]">
       {/* Fixed Navigation */}
@@ -631,14 +645,30 @@ export default function WeddingPage() {
             </div>
 
             <div className="max-w-2xl mx-auto">
-              <Card className="border-none shadow-lg bg-white/90 backdrop-blur-sm">
-                <div className="p-8">
-                  <p className="mb-8 text-center font-light">
-                    Prosíme o potvrzení vaší účasti do 15. března 2026.
-                  </p>
-                  <RsvpForm />
-                </div>
-              </Card>
+              {isSubmitted ? (
+                <Card
+                  ref={thankYouCardRef}
+                  className="border-none shadow-lg bg-green-100"
+                >
+                  <div className="p-8 text-center">
+                    <h2 className="text-2xl font-bold mb-4 text-green-800">
+                      Děkujeme!
+                    </h2>
+                    <p className="text-green-700">
+                      Vaše RSVP bylo úspěšně odesláno. Těšíme se na vás!
+                    </p>
+                  </div>
+                </Card>
+              ) : (
+                <Card className="border-none shadow-lg bg-white/90 backdrop-blur-sm">
+                  <div className="p-8">
+                    <p className="mb-8 text-center font-light">
+                      Prosíme o potvrzení vaší účasti do 15. března 2026.
+                    </p>
+                    <RsvpForm onSubmit={() => setIsSubmitted(true)} />
+                  </div>
+                </Card>
+              )}
             </div>
           </div>
         </section>
