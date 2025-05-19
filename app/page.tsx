@@ -87,14 +87,14 @@ export default function WeddingPage() {
                   Dress code
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="#zasedaci-poradek"
                   className="text-sm font-light tracking-wide hover:text-[#d5bdaf] transition-colors text-[#986b50]"
                 >
                   Zasedací pořádek
                 </a>
-              </li>
+              </li> */}
 
               <li>
                 <a
@@ -112,14 +112,14 @@ export default function WeddingPage() {
                   Kontakty
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="#faq"
                   className="text-sm font-light tracking-wide hover:text-[#d5bdaf] transition-colors text-[#986b50]"
                 >
                   FAQ
                 </a>
-              </li>
+              </li> */}
             </ul>
             <Button
               variant="outline"
@@ -615,7 +615,7 @@ export default function WeddingPage() {
         </section>
 
         {/* Seating Chart */}
-        <section id="zasedaci-poradek" className="py-24 bg-[#edede9]">
+        {/* <section id="zasedaci-poradek" className="py-24 bg-[#edede9]">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-center mb-12">
               <div className="h-px w-12 bg-[#d5bdaf]"></div>
@@ -631,7 +631,7 @@ export default function WeddingPage() {
               </Card>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* RSVP */}
         <section id="rsvp" className="py-24 bg-[#e3d5ca]">
@@ -750,7 +750,7 @@ export default function WeddingPage() {
         </section>
 
         {/* FAQ */}
-        <section id="faq" className="py-24 bg-[#edede9]">
+        {/* <section id="faq" className="py-24 bg-[#edede9]">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-center mb-12">
               <div className="h-px w-12 bg-[#d5bdaf]"></div>
@@ -819,7 +819,7 @@ export default function WeddingPage() {
               </Card>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
 
       <footer className="bg-[#d5bdaf] text-white py-12">
