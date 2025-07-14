@@ -24,6 +24,15 @@
     --input: 20 5.9% 90%;
     --ring: 24 27.1% 74.5%;
     --radius: 0.5rem;
+    
+    /* Wedding-specific color variables */
+    --wedding-cream: #faf7f2;
+    --wedding-blush: #f4e6d9;
+    --wedding-rose: #e8c5a0;
+    --wedding-sage: #a8b5a0;
+    --wedding-charcoal: #5d4e37;
+    --wedding-gold: #d4af37;
+  
   }
 
   .dark {

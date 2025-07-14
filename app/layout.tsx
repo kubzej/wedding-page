@@ -32,7 +32,6 @@ const dancingScript = Dancing_Script({
 export const metadata: Metadata = {
   title: 'Tereza & Jakub | Svatební stránka',
   description: 'Svatební stránka Terezy a Jakuba',
-  generator: 'v0.dev',
 };
 
 export default function RootLayout({
