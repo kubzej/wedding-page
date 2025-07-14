@@ -8,6 +8,7 @@ import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from '@/components/ui/use-toast';
+import emailjs from '@emailjs/browser';
 
 interface RsvpFormProps {
   onSubmit: () => void; // Callback to notify parent of successful submission
@@ -47,50 +48,35 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
     try {
       console.log('Sending RSVP with data:', formData);
 
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          subject: 'Nové svatební RSVP',
-          text: `RSVP Details:
-Jméno: ${formData.name}
-Email: ${formData.email}
-Telefon: ${formData.phone}
-Účastním se?: ${
-            formData.attendance === 'yes'
-              ? 'Ano, s radostí přijdu'
-              : 'Ne, bohužel se nemohu zúčastnit'
-          }
-Počet doprovázejících dospělích: ${formData.guests}
-Počet dětí: ${formData.children}
-Diety: ${formData.dietaryRestrictions || 'None'}
-Zúčastním se pátečního eventu?: ${formData.preWeddingEvent ? 'Ano' : 'Ne'}
-Mám zájem o ubytování?: ${formData.accommodation ? 'Ano' : 'Ne'}
-Message: ${formData.message || 'No message'}`,
-          to: 'kubzej8@gmail.com',
-        }),
+      // EmailJS configuration
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
+
+      const emailParams = {
+        to_email: 'kubzej8@gmail.com',
+        from_name: formData.name,
+        from_email: formData.email || 'noreply@wedding.com',
+        phone: formData.phone || 'Neuvedeno',
+        attendance:
+          formData.attendance === 'yes'
+            ? 'Ano, s radostí přijdu'
+            : 'Ne, bohužel se nemohu zúčastnit',
+        guests: formData.guests,
+        children: formData.children,
+        dietary_restrictions: formData.dietaryRestrictions || 'Žádné',
+        pre_wedding_event: formData.preWeddingEvent ? 'Ano' : 'Ne',
+        accommodation: formData.accommodation ? 'Ano' : 'Ne',
+        message: formData.message || 'Žádný vzkaz',
+      };
+
+      await emailjs.send(serviceId, templateId, emailParams, publicKey);
+
+      toast({
+        title: 'RSVP odesláno',
+        description: 'Děkujeme za vaši odpověď!',
       });
-
-      console.log('Response status:', response.status);
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const result = await response.json();
-      console.log('Response result:', result);
-
-      if (result.success) {
-        toast({
-          title: 'RSVP odesláno',
-          description: 'Děkujeme za vaši odpověď!',
-        });
-        onSubmit(); // Notify parent of successful submission
-      } else {
-        throw new Error(result.error || 'Failed to send email');
-      }
+      onSubmit(); // Notify parent of successful submission
     } catch (error) {
       console.error('Error submitting RSVP:', error);
       toast({
