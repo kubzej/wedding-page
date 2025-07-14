@@ -7,7 +7,6 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Textarea } from '@/components/ui/textarea';
-import { Checkbox } from '@/components/ui/checkbox';
 import { toast } from '@/components/ui/use-toast';
 
 interface RsvpFormProps {
@@ -24,6 +23,7 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
     children: 0,
     dietaryRestrictions: '',
     preWeddingEvent: false,
+    accommodation: false,
     message: '',
   });
 
@@ -38,10 +38,6 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
 
   const handleRadioChange = (value: string) => {
     setFormData((prev) => ({ ...prev, attendance: value }));
-  };
-
-  const handleCheckboxChange = (checked: boolean) => {
-    setFormData((prev) => ({ ...prev, preWeddingEvent: checked }));
   };
 
   async function handleSubmit(event: React.FormEvent) {
@@ -69,6 +65,7 @@ Počet doprovázejících dospělích: ${formData.guests}
 Počet dětí: ${formData.children}
 Diety: ${formData.dietaryRestrictions || 'None'}
 Zúčastním se pátečního eventu?: ${formData.preWeddingEvent ? 'Ano' : 'Ne'}
+Mám zájem o ubytování?: ${formData.accommodation ? 'Ano' : 'Ne'}
 Message: ${formData.message || 'No message'}`,
           to: 'kubzej8@gmail.com',
         }),
@@ -215,14 +212,38 @@ Message: ${formData.message || 'No message'}`,
             </div>
 
             <div className="flex items-center space-x-2">
-              <Checkbox
+              <input
+                type="checkbox"
                 id="preWeddingEvent"
                 checked={formData.preWeddingEvent}
-                onCheckedChange={handleCheckboxChange}
-                className="text-[#d5bdaf] border-[#d5bdaf]/50"
+                onChange={(e) =>
+                  setFormData((prev) => ({
+                    ...prev,
+                    preWeddingEvent: e.target.checked,
+                  }))
+                }
+                className="h-4 w-4 text-[#d5bdaf] border-[#d5bdaf]/50 rounded focus:ring-[#d5bdaf]"
               />
               <Label htmlFor="preWeddingEvent" className="text-sm">
-                Zúčastním se předsvatebního grilování (29. května)
+                Zúčastním se předsvatebního setkání (29. května)
+              </Label>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <input
+                type="checkbox"
+                id="accommodation"
+                checked={formData.accommodation}
+                onChange={(e) =>
+                  setFormData((prev) => ({
+                    ...prev,
+                    accommodation: e.target.checked,
+                  }))
+                }
+                className="h-4 w-4 text-[#d5bdaf] border-[#d5bdaf]/50 rounded focus:ring-[#d5bdaf]"
+              />
+              <Label htmlFor="accommodation" className="text-sm">
+                Mám zájem o ubytování přímom na Smrčinách
               </Label>
             </div>
           </>

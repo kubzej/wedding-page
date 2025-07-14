@@ -166,9 +166,6 @@ export default function WeddingPage() {
                   <h2 className="text-4xl font-serif font-medium tracking-wide text-[#5d4e37] mb-2">
                     Náš příběh
                   </h2>
-                  <span className="text-lg font-script text-[#d4af37] tracking-wide">
-                    love story
-                  </span>
                 </div>
                 <div className="h-px w-16 bg-gradient-to-r from-transparent via-[#d4af37] to-transparent"></div>
               </div>
@@ -205,9 +202,6 @@ export default function WeddingPage() {
                 <h2 className="text-4xl font-serif font-medium tracking-wide text-[#5d4e37] mb-2">
                   Místo konání
                 </h2>
-                <span className="text-lg font-script text-[#d4af37] tracking-wide">
-                  venue
-                </span>
               </div>
               <div className="h-px w-16 bg-gradient-to-r from-transparent via-[#d4af37] to-transparent"></div>
             </div>
@@ -277,9 +271,6 @@ export default function WeddingPage() {
                 <h2 className="text-4xl font-serif font-medium tracking-wide text-[#5d4e37] mb-2">
                   Program dne
                 </h2>
-                <span className="text-lg font-script text-[#d4af37] tracking-wide">
-                  timeline
-                </span>
               </div>
               <div className="h-px w-16 bg-gradient-to-r from-transparent via-[#d4af37] to-transparent"></div>
             </div>
@@ -301,15 +292,16 @@ export default function WeddingPage() {
                         <div className="ml-6">
                           <div className="flex items-baseline">
                             <h3 className="text-xl font-serif font-light tracking-wide text-[#5d4e37]">
-                              10:30
+                              10:00–11:00
                             </h3>
                             <div className="h-px w-12 bg-[#d4af37]/30 mx-4"></div>
                             <p className="text-lg font-medium text-[#5d4e37]">
-                              Příjezd hostů
+                              Příjezd, uvítání hostů
                             </p>
                           </div>
                           <p className="mt-2 text-[#5d4e37]/70">
-                            Přivítání hostů a usazení
+                            Neformální přivítání hostů, usazení a příprava na
+                            obřad.
                           </p>
                         </div>
                       </div>
@@ -324,7 +316,7 @@ export default function WeddingPage() {
                         <div className="ml-6">
                           <div className="flex items-baseline">
                             <h3 className="text-xl font-serif font-light tracking-wide text-[#5d4e37]">
-                              11:00
+                              11:00–11:30
                             </h3>
                             <div className="h-px w-12 bg-[#d4af37]/30 mx-4"></div>
                             <p className="text-lg font-medium text-[#5d4e37]">
@@ -332,7 +324,7 @@ export default function WeddingPage() {
                             </p>
                           </div>
                           <p className="mt-2 text-[#5d4e37]/70">
-                            Slavnostní ceremonie ve zahradě
+                            Samotný obřad v zahradě
                           </p>
                         </div>
                       </div>
@@ -347,15 +339,15 @@ export default function WeddingPage() {
                         <div className="ml-6">
                           <div className="flex items-baseline">
                             <h3 className="text-xl font-serif font-light tracking-wide text-[#5d4e37]">
-                              12:00
+                              11:30–13:00
                             </h3>
                             <div className="h-px w-12 bg-[#d4af37]/30 mx-4"></div>
                             <p className="text-lg font-medium text-[#5d4e37]">
-                              Společné fotografování
+                              Gratulace & společné fotografování
                             </p>
                           </div>
                           <p className="mt-2 text-[#5d4e37]/70">
-                            Skupinové a individuální fotografie
+                            Skupinové a párové focení, přesun na hostinu
                           </p>
                         </div>
                       </div>
@@ -370,15 +362,85 @@ export default function WeddingPage() {
                         <div className="ml-6">
                           <div className="flex items-baseline">
                             <h3 className="text-xl font-serif font-light tracking-wide text-[#5d4e37]">
-                              13:00
+                              13:00-14:00
                             </h3>
                             <div className="h-px w-12 bg-[#d4af37]/30 mx-4"></div>
                             <p className="text-lg font-medium text-[#5d4e37]">
-                              Svatební hostina
+                              Svatební oběd
                             </p>
                           </div>
                           <p className="mt-2 text-[#5d4e37]/70">
-                            Slavnostní oběd
+                            Svatební oběd s přípitkem
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="flex">
+                        <div className="relative">
+                          <div className="h-8 w-8 rounded-full bg-[#d4af37] flex items-center justify-center text-white z-10 relative">
+                            <Clock className="h-4 w-4" />
+                          </div>
+                          <div className="absolute top-4 left-4 h-full w-px bg-[#d4af37]/30"></div>
+                        </div>
+                        <div className="ml-6">
+                          <div className="flex items-baseline">
+                            <h3 className="text-xl font-serif font-light tracking-wide text-[#5d4e37]">
+                              14:00–17:00
+                            </h3>
+                            <div className="h-px w-12 bg-[#d4af37]/30 mx-4"></div>
+                            <p className="text-lg font-medium text-[#5d4e37]">
+                              Dort, káva a zábava
+                            </p>
+                          </div>
+                          <p className="mt-2 text-[#5d4e37]/70">
+                            Po obědě dort, káva a zábava
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="flex">
+                        <div className="relative">
+                          <div className="h-8 w-8 rounded-full bg-[#d4af37] flex items-center justify-center text-white z-10 relative">
+                            <Clock className="h-4 w-4" />
+                          </div>
+                          <div className="absolute top-4 left-4 h-full w-px bg-[#d4af37]/30"></div>
+                        </div>
+                        <div className="ml-6">
+                          <div className="flex items-baseline">
+                            <h3 className="text-xl font-serif font-light tracking-wide text-[#5d4e37]">
+                              17:00–18:30
+                            </h3>
+                            <div className="h-px w-12 bg-[#d4af37]/30 mx-4"></div>
+                            <p className="text-lg font-medium text-[#5d4e37]">
+                              Lehké občerstvení, raut
+                            </p>
+                          </div>
+                          <p className="mt-2 text-[#5d4e37]/70">
+                            Odpolední raut, posezení, neformální povídání,
+                            příprava na večer.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="flex">
+                        <div className="relative">
+                          <div className="h-8 w-8 rounded-full bg-[#d4af37] flex items-center justify-center text-white z-10 relative">
+                            <Clock className="h-4 w-4" />
+                          </div>
+                          <div className="absolute top-4 left-4 h-full w-px bg-[#d4af37]/30"></div>
+                        </div>
+                        <div className="ml-6">
+                          <div className="flex items-baseline">
+                            <h3 className="text-xl font-serif font-light tracking-wide text-[#5d4e37]">
+                              18:30–19:00
+                            </h3>
+                            <div className="h-px w-12 bg-[#d4af37]/30 mx-4"></div>
+                            <p className="text-lg font-medium text-[#5d4e37]">
+                              První tanec a zahájení večera
+                            </p>
+                          </div>
+                          <p className="mt-2 text-[#5d4e37]/70">
+                            První tanec novomanželů, zahájení večerní zábavy.
                           </p>
                         </div>
                       </div>
@@ -392,7 +454,7 @@ export default function WeddingPage() {
                         <div className="ml-6">
                           <div className="flex items-baseline">
                             <h3 className="text-xl font-serif font-light tracking-wide text-[#5d4e37]">
-                              19:00
+                              19:00+
                             </h3>
                             <div className="h-px w-12 bg-[#d4af37]/30 mx-4"></div>
                             <p className="text-lg font-medium text-[#5d4e37]">
@@ -400,7 +462,7 @@ export default function WeddingPage() {
                             </p>
                           </div>
                           <p className="mt-2 text-[#5d4e37]/70">
-                            Hudba, tanec a oslava do pozdních hodin
+                            Hudba, tanec a oslava až do pozdních hodin.
                           </p>
                         </div>
                       </div>
@@ -421,9 +483,6 @@ export default function WeddingPage() {
                 <h2 className="text-4xl font-serif font-medium tracking-wide text-[#5d4e37] mb-2">
                   Doprava a ubytování
                 </h2>
-                <span className="text-lg font-script text-[#d4af37] tracking-wide">
-                  travel & stay
-                </span>
               </div>
               <div className="h-px w-16 bg-gradient-to-r from-transparent via-[#d4af37] to-transparent"></div>
             </div>
@@ -437,13 +496,12 @@ export default function WeddingPage() {
                   </h3>
                 </div>
                 <p className="mb-4 text-[#5d4e37]/70">
-                  Areál smrčiny je dostupný autem. Parkování je možné přímo v u
-                  areálu.
+                  Smrčiny jsou lehce dostupné autem. Parkování je možné na
+                  místě.
                 </p>
                 <p className="mb-4 text-[#5d4e37]/70">
-                  Pro ubytované hosty přímo na Smrčinách není nutnéí řešit odvoz
-                  ze svatby. Pro hosty bytováné v XX bnude zajišten řidič.
-                  Kontakt na vyžádání nebo zde na stránce.
+                  Prosíme o příjezd v dostatečnék předstihu, aby obřad mohl
+                  proběhnout bez zpoždění.
                 </p>
               </Card>
 
@@ -455,14 +513,14 @@ export default function WeddingPage() {
                   </h3>
                 </div>
                 <p className="mb-4 text-[#5d4e37]/70">
-                  Den před svatbou (29. května) pořádáme neformální grilování
-                  pro hosty, kteří přijedou dříve. Setkání se koná od 18:00 v
-                  areálu Smrčin. Rádi Vás uvidíme předem a rádi s Vámi strávíme
-                  společný čas před velkým dnem.
+                  Zveme vás na neformální opékání buřtů a večerní setkání den
+                  před svatbou – 29. 5. od 18:00 v areálu Smrčin. Akce je určena
+                  pro hosty, kteří přijedou dříve, a bude skvělou příležitostí
+                  se seznámit a užít si společný čas před svatebním dnem.
                 </p>
                 <p className="text-[#5d4e37]/70">
-                  Pokud máte zájem se zúčastnit, dejte nám prosím vědět v RSVP
-                  formuláři níže.
+                  Prosíme, potvrďte svou účast v RSVP, abychom s vámi mohli
+                  počítat.
                 </p>
               </Card>
             </div>
@@ -476,36 +534,22 @@ export default function WeddingPage() {
                   </h3>
                 </div>
                 <p className="mb-6 text-[#5d4e37]/90">
-                  Pro hosty jsme zajistili zvýhodněné ubytování přímo na zámku
-                  Hrubá Skála a v přilehlých penzionech. Při rezervaci uveďte
-                  heslo "Svatba Tereza a Jakub". Pro hosty jsme zajistili
-                  ubytování přímo na Smrčinách popřípadě na XX.
+                  Máme k dispozici ubytování přímo na Smrčinách, kde se svatba
+                  koná. Budeme rádi, pokud nám dáte vědět svoje zda-li byste
+                  využili tuto možnost.
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="p-4 bg-white/60 backdrop-blur-sm rounded-lg border border-[#d4af37]/20">
-                    <h4 className="font-serif font-medium mb-2 text-[#5d4e37]">
-                      Zámek Hrubá Skála
-                    </h4>
-                    <p className="text-sm mb-1 text-[#5d4e37]/70">
-                      Tel: +420 123 456 789
-                    </p>
-                    <p className="text-sm text-[#5d4e37]/70">
-                      Email: rezervace@hrubaskala.cz
-                    </p>
-                  </div>
+                <p className="mb-6 text-[#5d4e37]/90">
+                  V případě naplnení kapacity Smrčin doporučíme a zařídíme
+                  ubytování přímo v Želivě.
+                </p>
 
-                  <div className="p-4 bg-white/60 backdrop-blur-sm rounded-lg border border-[#d4af37]/20">
-                    <h4 className="font-serif font-medium mb-2 text-[#5d4e37]">
-                      Penzion Pod Zámkem
-                    </h4>
-                    <p className="text-sm mb-1 text-[#5d4e37]/70">
-                      Tel: +420 987 654 321
-                    </p>
-                    <p className="text-sm text-[#5d4e37]/70">
-                      Email: info@penzionpodzamkem.cz
-                    </p>
-                  </div>
+                <div className="mt-6 p-4 bg-[#d4af37]/10 rounded-lg border-l-4 border-[#d4af37]">
+                  <p className="text-[#5d4e37]/80 text-sm">
+                    <strong>Jak nám dát vědět:</strong> Svoje preference ohledně
+                    ubytování uveďte prosím v RSVP formuláři nebo nám napište
+                    přímo. Rádi vám pomůžeme s organizací!
+                  </p>
                 </div>
               </Card>
             </div>
@@ -524,67 +568,123 @@ export default function WeddingPage() {
                 <h2 className="text-4xl font-serif font-medium tracking-wide text-[#5d4e37] mb-2">
                   Dress Code
                 </h2>
-                <span className="text-lg font-script text-[#d4af37] tracking-wide">
-                  what to wear
-                </span>
               </div>
               <div className="h-px w-16 bg-gradient-to-r from-transparent via-[#d4af37] to-transparent"></div>
             </div>
 
             <div className="max-w-4xl mx-auto">
-              <Card className="overflow-hidden border-none shadow-lg bg-white/90 backdrop-blur-sm">
+              <Card className="overflow-hidden border-none shadow-lg bg-gradient-to-br from-[#faf7f2] to-[#f4e6d9]">
                 <div className="md:grid md:grid-cols-2">
                   <div className="p-8">
                     <div className="flex items-center mb-6">
-                      <Shirt className="h-6 w-6 text-[#d5bdaf] mr-3" />
-                      <h3 className="text-xl font-serif font-light tracking-wide text-[#5d4e37]">
+                      <Shirt className="h-6 w-6 text-[#d4af37] mr-3" />
+                      <h3 className="text-xl font-serif font-medium tracking-wide text-[#5d4e37]">
                         Formální elegance
                       </h3>
                     </div>
 
-                    <p className="mb-6 text-[#5d4e37]/70">
+                    <p className="mb-6 text-[#5d4e37]/80 leading-relaxed">
                       Prosíme hosty o formální oblečení odpovídající slavnostní
                       příležitosti. Pánové oblek, dámy šaty nebo kostýmek.
                     </p>
 
                     <div className="space-y-6">
                       <div>
-                        <h4 className="font-medium mb-3">Preferované barvy</h4>
-                        <div className="flex flex-wrap gap-3">
-                          <div
-                            className="h-10 w-10 rounded-full bg-[#edede9] ring-2 ring-[#d5bdaf] ring-offset-2"
-                            title="Isabelline"
-                          ></div>
-                          <div
-                            className="h-10 w-10 rounded-full bg-[#d6ccc2] ring-2 ring-[#d5bdaf] ring-offset-2"
-                            title="Timberwolf"
-                          ></div>
-                          <div
-                            className="h-10 w-10 rounded-full bg-[#f5ebe0] ring-2 ring-[#d5bdaf] ring-offset-2"
-                            title="Linen"
-                          ></div>
-                          <div
-                            className="h-10 w-10 rounded-full bg-[#e3d5ca] ring-2 ring-[#d5bdaf] ring-offset-2"
-                            title="Champagne pink"
-                          ></div>
-                          <div
-                            className="h-10 w-10 rounded-full bg-[#d4af37] ring-2 ring-[#d5bdaf] ring-offset-2"
-                            title="Pale Dogwood"
-                          ></div>
+                        <h4 className="font-serif font-medium mb-4 text-[#5d4e37]">
+                          Preferované barvy
+                        </h4>
+                        <div className="grid grid-cols-5 gap-3 mb-4">
+                          <div className="text-center">
+                            <div
+                              className="h-12 w-12 rounded-full bg-[#faf7f2] ring-2 ring-[#d4af37] ring-offset-2 mx-auto shadow-sm"
+                              title="Cream"
+                            ></div>
+                            <p className="text-xs mt-2 text-[#5d4e37]/60">
+                              Cream
+                            </p>
+                          </div>
+                          <div className="text-center">
+                            <div
+                              className="h-12 w-12 rounded-full bg-[#f4e6d9] ring-2 ring-[#d4af37] ring-offset-2 mx-auto shadow-sm"
+                              title="Blush"
+                            ></div>
+                            <p className="text-xs mt-2 text-[#5d4e37]/60">
+                              Blush
+                            </p>
+                          </div>
+                          <div className="text-center">
+                            <div
+                              className="h-12 w-12 rounded-full bg-[#e8c5a0] ring-2 ring-[#d4af37] ring-offset-2 mx-auto shadow-sm"
+                              title="Sage"
+                            ></div>
+                            <p className="text-xs mt-2 text-[#5d4e37]/60">
+                              Sage
+                            </p>
+                          </div>
+                          <div className="text-center">
+                            <div
+                              className="h-12 w-12 rounded-full bg-[#a8b5a0] ring-2 ring-[#d4af37] ring-offset-2 mx-auto shadow-sm"
+                              title="Sage Green"
+                            ></div>
+                            <p className="text-xs mt-2 text-[#5d4e37]/60">
+                              Sage
+                            </p>
+                          </div>
+                          <div className="text-center">
+                            <div
+                              className="h-12 w-12 rounded-full bg-[#d4af37] ring-2 ring-[#d4af37] ring-offset-2 mx-auto shadow-sm"
+                              title="Gold"
+                            ></div>
+                            <p className="text-xs mt-2 text-[#5d4e37]/60">
+                              Gold
+                            </p>
+                          </div>
                         </div>
-                        <p className="mt-3 text-sm text-[#5d4e37]/70">
+                        <p className="text-sm text-[#5d4e37]/70 bg-white/50 p-3 rounded-lg">
                           Barevná paleta svatby je v neutrálních, přírodních
                           tónech.
                         </p>
                       </div>
 
                       <div>
-                        <h4 className="font-medium mb-3">Prosíme vyhnout se</h4>
-                        <ul className="list-disc list-inside space-y-1 text-sm text-[#5d4e37]/70">
-                          <li>Čistě bílé oblečení (vyhrazeno pro nevěstu)</li>
-                          <li>Příliš výrazným a zářivým barvám</li>
-                          <li>Džínám a neformálnímu oblečení</li>
-                        </ul>
+                        <h4 className="font-serif font-medium mb-3 text-[#5d4e37]">
+                          Prosíme vyhnout se
+                        </h4>
+                        <div className="bg-white/50 p-4 rounded-lg">
+                          <ul className="space-y-2 text-sm text-[#5d4e37]/80">
+                            <li className="flex items-center">
+                              <span className="w-2 h-2 bg-[#d4af37] rounded-full mr-3"></span>
+                              Čistě bílé oblečení (vyhrazeno pro nevěstu)
+                            </li>
+                            <li className="flex items-center">
+                              <span className="w-2 h-2 bg-[#d4af37] rounded-full mr-3"></span>
+                              Příliš výrazným a zářivým barvám
+                            </li>
+                            <li className="flex items-center">
+                              <span className="w-2 h-2 bg-[#d4af37] rounded-full mr-3"></span>
+                              Džínám a neformálnímu oblečení
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="relative bg-gradient-to-br from-[#f4e6d9] to-[#faf7f2]">
+                    <div className="h-full flex items-center justify-center p-8">
+                      <div className="text-center">
+                        <div className="mx-auto mb-6 bg-white/30 backdrop-blur-sm rounded-2xl p-3 shadow-lg w-48">
+                          <Image
+                            src="/dress-code.png"
+                            alt="Dress code illustration"
+                            width={200}
+                            height={200}
+                            className="w-full h-auto object-contain rounded-lg"
+                          />
+                        </div>
+                        <h4 className="text-lg font-script text-[#d4af37] mb-2">
+                          Elegant & Timeless
+                        </h4>
                       </div>
                     </div>
                   </div>
@@ -622,9 +722,6 @@ export default function WeddingPage() {
                 <h2 className="text-4xl font-serif font-medium tracking-wide text-[#5d4e37] mb-2">
                   RSVP
                 </h2>
-                <span className="text-lg font-script text-[#d4af37] tracking-wide">
-                  please respond
-                </span>
               </div>
               <div className="h-px w-16 bg-gradient-to-r from-transparent via-[#d4af37] to-transparent"></div>
             </div>
@@ -648,7 +745,7 @@ export default function WeddingPage() {
                 <Card className="border-none shadow-lg bg-gradient-to-br from-[#faf7f2] to-[#f4e6d9]">
                   <div className="p-8">
                     <p className="mb-8 text-center font-light text-[#5d4e37]">
-                      Prosíme o potvrzení vaší účasti do 15. března 2026.
+                      Prosíme o potvrzení vaší účasti do 1. března 2026.
                     </p>
                     <RsvpForm onSubmit={() => setIsSubmitted(true)} />
                   </div>
@@ -670,9 +767,6 @@ export default function WeddingPage() {
                 <h2 className="text-4xl font-serif font-medium tracking-wide text-[#5d4e37] mb-2">
                   Kontakty
                 </h2>
-                <span className="text-lg font-script text-[#d4af37] tracking-wide">
-                  get in touch
-                </span>
               </div>
               <div className="h-px w-16 bg-gradient-to-r from-transparent via-[#d4af37] to-transparent"></div>
             </div>
