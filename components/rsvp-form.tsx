@@ -7,7 +7,6 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Textarea } from '@/components/ui/textarea';
-import { Checkbox } from '@/components/ui/checkbox';
 import { toast } from '@/components/ui/use-toast';
 
 interface RsvpFormProps {
@@ -24,6 +23,7 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
     children: 0,
     dietaryRestrictions: '',
     preWeddingEvent: false,
+    accommodation: false,
     message: '',
   });
 
@@ -40,15 +40,13 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
     setFormData((prev) => ({ ...prev, attendance: value }));
   };
 
-  const handleCheckboxChange = (checked: boolean) => {
-    setFormData((prev) => ({ ...prev, preWeddingEvent: checked }));
-  };
-
   async function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
     setIsSubmitting(true);
 
     try {
+      console.log('Sending RSVP with data:', formData);
+
       const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
@@ -69,12 +67,20 @@ Počet doprovázejících dospělích: ${formData.guests}
 Počet dětí: ${formData.children}
 Diety: ${formData.dietaryRestrictions || 'None'}
 Zúčastním se pátečního eventu?: ${formData.preWeddingEvent ? 'Ano' : 'Ne'}
+Mám zájem o ubytování?: ${formData.accommodation ? 'Ano' : 'Ne'}
 Message: ${formData.message || 'No message'}`,
           to: 'kubzej8@gmail.com',
         }),
       });
 
+      console.log('Response status:', response.status);
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
       const result = await response.json();
+      console.log('Response result:', result);
 
       if (result.success) {
         toast({
@@ -86,10 +92,11 @@ Message: ${formData.message || 'No message'}`,
         throw new Error(result.error || 'Failed to send email');
       }
     } catch (error) {
-      console.error('Error:', error);
+      console.error('Error submitting RSVP:', error);
       toast({
         title: 'Chyba',
-        description: 'Nepodařilo se odeslat RSVP.',
+        description: 'Nepodařilo se odeslat RSVP. Zkuste to prosím znovu.',
+        variant: 'destructive',
       });
     } finally {
       setIsSubmitting(false);
@@ -116,7 +123,7 @@ Message: ${formData.message || 'No message'}`,
 
         <div>
           <Label htmlFor="email" className="text-sm font-medium">
-            Email
+            Email (nepovinné)
           </Label>
           <Input
             id="email"
@@ -124,21 +131,19 @@ Message: ${formData.message || 'No message'}`,
             type="email"
             value={formData.email}
             onChange={handleChange}
-            required
             className="mt-1 bg-[#edede9]/30 border-[#d5bdaf]/20 focus:border-[#d5bdaf] focus:ring-[#d5bdaf]"
           />
         </div>
 
         <div>
           <Label htmlFor="phone" className="text-sm font-medium">
-            Telefon
+            Telefon (nepovinné)
           </Label>
           <Input
             id="phone"
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            required
             className="mt-1 bg-[#edede9]/30 border-[#d5bdaf]/20 focus:border-[#d5bdaf] focus:ring-[#d5bdaf]"
           />
         </div>
@@ -215,14 +220,38 @@ Message: ${formData.message || 'No message'}`,
             </div>
 
             <div className="flex items-center space-x-2">
-              <Checkbox
+              <input
+                type="checkbox"
                 id="preWeddingEvent"
                 checked={formData.preWeddingEvent}
-                onCheckedChange={handleCheckboxChange}
-                className="text-[#d5bdaf] border-[#d5bdaf]/50"
+                onChange={(e) =>
+                  setFormData((prev) => ({
+                    ...prev,
+                    preWeddingEvent: e.target.checked,
+                  }))
+                }
+                className="h-4 w-4 text-[#d5bdaf] border-[#d5bdaf]/50 rounded focus:ring-[#d5bdaf]"
               />
               <Label htmlFor="preWeddingEvent" className="text-sm">
-                Zúčastním se předsvatebního grilování (29. května)
+                Zúčastním se předsvatebního setkání (29. května)
+              </Label>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <input
+                type="checkbox"
+                id="accommodation"
+                checked={formData.accommodation}
+                onChange={(e) =>
+                  setFormData((prev) => ({
+                    ...prev,
+                    accommodation: e.target.checked,
+                  }))
+                }
+                className="h-4 w-4 text-[#d5bdaf] border-[#d5bdaf]/50 rounded focus:ring-[#d5bdaf]"
+              />
+              <Label htmlFor="accommodation" className="text-sm">
+                Mám zájem o ubytování přímom na Smrčinách
               </Label>
             </div>
           </>
