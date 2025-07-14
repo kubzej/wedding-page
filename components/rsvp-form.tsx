@@ -45,6 +45,8 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
     setIsSubmitting(true);
 
     try {
+      console.log('Sending RSVP with data:', formData);
+
       const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
@@ -71,7 +73,14 @@ Message: ${formData.message || 'No message'}`,
         }),
       });
 
+      console.log('Response status:', response.status);
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
       const result = await response.json();
+      console.log('Response result:', result);
 
       if (result.success) {
         toast({
@@ -83,10 +92,11 @@ Message: ${formData.message || 'No message'}`,
         throw new Error(result.error || 'Failed to send email');
       }
     } catch (error) {
-      console.error('Error:', error);
+      console.error('Error submitting RSVP:', error);
       toast({
         title: 'Chyba',
-        description: 'Nepodařilo se odeslat RSVP.',
+        description: 'Nepodařilo se odeslat RSVP. Zkuste to prosím znovu.',
+        variant: 'destructive',
       });
     } finally {
       setIsSubmitting(false);
@@ -113,7 +123,7 @@ Message: ${formData.message || 'No message'}`,
 
         <div>
           <Label htmlFor="email" className="text-sm font-medium">
-            Email
+            Email (nepovinné)
           </Label>
           <Input
             id="email"
@@ -121,21 +131,19 @@ Message: ${formData.message || 'No message'}`,
             type="email"
             value={formData.email}
             onChange={handleChange}
-            required
             className="mt-1 bg-[#edede9]/30 border-[#d5bdaf]/20 focus:border-[#d5bdaf] focus:ring-[#d5bdaf]"
           />
         </div>
 
         <div>
           <Label htmlFor="phone" className="text-sm font-medium">
-            Telefon
+            Telefon (nepovinné)
           </Label>
           <Input
             id="phone"
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            required
             className="mt-1 bg-[#edede9]/30 border-[#d5bdaf]/20 focus:border-[#d5bdaf] focus:ring-[#d5bdaf]"
           />
         </div>
