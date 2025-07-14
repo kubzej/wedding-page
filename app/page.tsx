@@ -2,26 +2,10 @@
 
 import type React from 'react';
 import Image from 'next/image';
-import {
-  MapPin,
-  Clock,
-  Car,
-  Mail,
-  Phone,
-  Calendar,
-  Users,
-  Shirt,
-} from 'lucide-react';
+import { MapPin, Clock, Car, Mail, Phone, Users, Shirt } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
 import RsvpForm from '@/components/rsvp-form';
-import SeatingChart from '@/components/seating-chart';
 import CountdownTimer from '@/components/countdown-timer';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useEffect, useRef, useState } from 'react';
@@ -43,14 +27,14 @@ export default function WeddingPage() {
       <header className="fixed top-0 left-0 right-0 bg-[#f5ebe0]/80 backdrop-blur-md z-50 border-b border-[#d5bdaf]/20">
         <div className="container mx-auto px-4">
           <nav className="flex items-center justify-between h-16">
-            <div className="text-xl font-light tracking-wide text-[#d5bdaf]">
+            <div className="text-2xl font-script tracking-wide text-[#986b50]">
               T & J
             </div>
             <ul className="hidden md:flex space-x-8">
               <li>
                 <a
                   href="#uvod"
-                  className="text-sm font-light tracking-wide hover:text-[#d5bdaf] transition-colors text-[#986b50]"
+                  className="text-base font-medium tracking-wide hover:text-[#d5bdaf] transition-colors text-[#986b50]"
                 >
                   Úvod
                 </a>
@@ -58,7 +42,7 @@ export default function WeddingPage() {
               <li>
                 <a
                   href="#misto"
-                  className="text-sm font-light tracking-wide hover:text-[#d5bdaf] transition-colors text-[#986b50]"
+                  className="text-base font-medium tracking-wide hover:text-[#d5bdaf] transition-colors text-[#986b50]"
                 >
                   Místo
                 </a>
@@ -66,7 +50,7 @@ export default function WeddingPage() {
               <li>
                 <a
                   href="#program"
-                  className="text-sm font-light tracking-wide hover:text-[#d5bdaf] transition-colors text-[#986b50]"
+                  className="text-base font-medium tracking-wide hover:text-[#d5bdaf] transition-colors text-[#986b50]"
                 >
                   Program
                 </a>
@@ -74,7 +58,7 @@ export default function WeddingPage() {
               <li>
                 <a
                   href="#doprava"
-                  className="text-sm font-light tracking-wide hover:text-[#d5bdaf] transition-colors text-[#986b50]"
+                  className="text-base font-medium tracking-wide hover:text-[#d5bdaf] transition-colors text-[#986b50]"
                 >
                   Doprava
                 </a>
@@ -82,7 +66,7 @@ export default function WeddingPage() {
               <li>
                 <a
                   href="#dress-code"
-                  className="text-sm font-light tracking-wide hover:text-[#d5bdaf] transition-colors text-[#986b50]"
+                  className="text-base font-medium tracking-wide hover:text-[#d5bdaf] transition-colors text-[#986b50]"
                 >
                   Dress code
                 </a>
@@ -99,7 +83,7 @@ export default function WeddingPage() {
               <li>
                 <a
                   href="#rsvp"
-                  className="text-sm font-light tracking-wide hover:text-[#d5bdaf] transition-colors text-[#986b50]"
+                  className="text-base font-medium tracking-wide hover:text-[#d5bdaf] transition-colors text-[#986b50]"
                 >
                   RSVP
                 </a>
@@ -107,7 +91,7 @@ export default function WeddingPage() {
               <li>
                 <a
                   href="#kontakty"
-                  className="text-sm font-light tracking-wide hover:text-[#d5bdaf] transition-colors text-[#986b50]"
+                  className="text-base font-medium tracking-wide hover:text-[#d5bdaf] transition-colors text-[#986b50]"
                 >
                   Kontakty
                 </a>
@@ -138,20 +122,26 @@ export default function WeddingPage() {
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/40"></div>
           <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-            <h1 className="text-6xl md:text-8xl font-extralight mb-6 tracking-widest">
+            <h1 className="text-6xl md:text-8xl font-script font-light mb-6 tracking-wide">
               Tereza & Jakub
             </h1>
 
+            <p className="text-2xl md:text-3xl font-script text-white/90 mb-8 tracking-wide">
+              30. května 2026
+            </p>
+
             <div className="flex flex-col items-center justify-center space-y-4 mb-12">
               <div className="flex items-center justify-center space-x-4">
-                <Calendar className="h-5 w-5" />
-                <span className="text-xl font-light tracking-wide">
-                  30. května 2026
+                <MapPin className="h-5 w-5" />
+                <span className="text-xl font-script font-light tracking-wide">
+                  Smrčiny
                 </span>
               </div>
               <div className="flex items-center justify-center space-x-4">
                 <Clock className="h-5 w-5" />
-                <span className="text-xl font-light tracking-wide">11:00</span>
+                <span className="text-xl font-script font-light tracking-wide">
+                  11:00
+                </span>
               </div>
             </div>
 
@@ -165,9 +155,14 @@ export default function WeddingPage() {
             <div className="max-w-3xl mx-auto text-center">
               <div className="flex items-center justify-center mb-12">
                 <div className="h-px w-12 bg-[#d5bdaf]"></div>
-                <h2 className="text-3xl font-medium mx-4 tracking-wide text-[#986b50]">
-                  Náš příběh
-                </h2>
+                <div className="flex flex-col items-center mx-4">
+                  <h2 className="text-3xl font-serif font-medium tracking-wide text-[#986b50]">
+                    Náš příběh
+                  </h2>
+                  <span className="text-lg font-script text-[#d5bdaf] mt-1">
+                    love story
+                  </span>
+                </div>
                 <div className="h-px w-12 bg-[#d5bdaf]"></div>
               </div>
 
@@ -193,14 +188,14 @@ export default function WeddingPage() {
           <div className="absolute bottom-0 right-0 w-full h-32 bg-[url('/placeholder.svg?height=100&width=2000')] opacity-5"></div>
 
           <div className="container mx-auto px-4 relative z-10">
+            {' '}
             <div className="flex items-center justify-center mb-12">
               <div className="h-px w-12 bg-[#d5bdaf]"></div>
-              <h2 className="text-3xl font-medium mx-4 tracking-wide text-[#986b50]">
+              <h2 className="text-3xl font-serif font-medium mx-4 tracking-wide text-[#986b50]">
                 Místo konání
               </h2>
               <div className="h-px w-12 bg-[#d5bdaf]"></div>
             </div>
-
             <div className="max-w-4xl mx-auto">
               <Card className="overflow-hidden border-none shadow-lg bg-white/80 backdrop-blur-sm">
                 <div className="h-96 relative">
@@ -260,7 +255,7 @@ export default function WeddingPage() {
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-center mb-12">
               <div className="h-px w-12 bg-[#d5bdaf]"></div>
-              <h2 className="text-3xl font-medium mx-4 tracking-wide text-[#986b50]">
+              <h2 className="text-3xl font-serif font-medium mx-4 tracking-wide text-[#986b50]">
                 Program dne
               </h2>
               <div className="h-px w-12 bg-[#d5bdaf]"></div>
@@ -299,7 +294,7 @@ export default function WeddingPage() {
                             </div>
                             <div className="ml-6">
                               <div className="flex items-baseline">
-                                <h3 className="text-xl font-light tracking-wide">
+                                <h3 className="text-xl font-serif font-light tracking-wide">
                                   10:30
                                 </h3>
                                 <div className="h-px w-12 bg-[#d5bdaf]/30 mx-4"></div>
@@ -322,7 +317,7 @@ export default function WeddingPage() {
                             </div>
                             <div className="ml-6">
                               <div className="flex items-baseline">
-                                <h3 className="text-xl font-light tracking-wide">
+                                <h3 className="text-xl font-serif font-light tracking-wide">
                                   11:00
                                 </h3>
                                 <div className="h-px w-12 bg-[#d5bdaf]/30 mx-4"></div>
@@ -345,7 +340,7 @@ export default function WeddingPage() {
                             </div>
                             <div className="ml-6">
                               <div className="flex items-baseline">
-                                <h3 className="text-xl font-light tracking-wide">
+                                <h3 className="text-xl font-serif font-light tracking-wide">
                                   12:00
                                 </h3>
                                 <div className="h-px w-12 bg-[#d5bdaf]/30 mx-4"></div>
@@ -368,7 +363,7 @@ export default function WeddingPage() {
                             </div>
                             <div className="ml-6">
                               <div className="flex items-baseline">
-                                <h3 className="text-xl font-light tracking-wide">
+                                <h3 className="text-xl font-serif font-light tracking-wide">
                                   13:00
                                 </h3>
                                 <div className="h-px w-12 bg-[#d5bdaf]/30 mx-4"></div>
@@ -390,7 +385,7 @@ export default function WeddingPage() {
                             </div>
                             <div className="ml-6">
                               <div className="flex items-baseline">
-                                <h3 className="text-xl font-light tracking-wide">
+                                <h3 className="text-xl font-serif font-light tracking-wide">
                                   19:00
                                 </h3>
                                 <div className="h-px w-12 bg-[#d5bdaf]/30 mx-4"></div>
@@ -463,7 +458,9 @@ export default function WeddingPage() {
               <Card className="p-8 border-none shadow-lg bg-white/90 backdrop-blur-sm h-full">
                 <div className="flex items-center mb-6">
                   <Car className="h-6 w-6 text-[#d5bdaf] mr-3" />
-                  <h3 className="text-xl font-light tracking-wide">Doprava</h3>
+                  <h3 className="text-xl font-serif font-light tracking-wide">
+                    Doprava
+                  </h3>
                 </div>
                 <p className="mb-4 text-muted-foreground">
                   Areál smrčiny je dostupný autem. Parkování je možné přímo v u
@@ -479,7 +476,7 @@ export default function WeddingPage() {
               <Card className="p-8 border-none shadow-lg bg-white/90 backdrop-blur-sm h-full">
                 <div className="flex items-center mb-6">
                   <Users className="h-6 w-6 text-[#d5bdaf] mr-3" />
-                  <h3 className="text-xl font-light tracking-wide">
+                  <h3 className="text-xl font-serif font-light tracking-wide">
                     Předsvatební setkání
                   </h3>
                 </div>
@@ -500,7 +497,7 @@ export default function WeddingPage() {
               <Card className="p-8 border-none shadow-lg bg-white/90 backdrop-blur-sm">
                 <div className="flex items-center mb-6">
                   <MapPin className="h-6 w-6 text-[#d5bdaf] mr-3" />
-                  <h3 className="text-xl font-light tracking-wide">
+                  <h3 className="text-xl font-serif font-light tracking-wide">
                     Ubytování
                   </h3>
                 </div>
@@ -557,7 +554,7 @@ export default function WeddingPage() {
                   <div className="p-8">
                     <div className="flex items-center mb-6">
                       <Shirt className="h-6 w-6 text-[#d5bdaf] mr-3" />
-                      <h3 className="text-xl font-light tracking-wide">
+                      <h3 className="text-xl font-serif font-light tracking-wide">
                         Formální elegance
                       </h3>
                     </div>
@@ -693,7 +690,7 @@ export default function WeddingPage() {
                     </span>
                   </div>
                 </div>
-                <h3 className="text-xl font-light mb-4 text-center tracking-wide">
+                <h3 className="text-xl font-serif font-light mb-4 text-center tracking-wide">
                   Ženich
                 </h3>
                 <div className="flex items-center mb-3 justify-center">
@@ -714,7 +711,7 @@ export default function WeddingPage() {
                     </span>
                   </div>
                 </div>
-                <h3 className="text-xl font-light mb-4 text-center tracking-wide">
+                <h3 className="text-xl font-serif font-light mb-4 text-center tracking-wide">
                   Nevěsta
                 </h3>
                 <div className="flex items-center mb-3 justify-center">
@@ -733,7 +730,7 @@ export default function WeddingPage() {
                     <Car className="h-8 w-8 text-[#d5bdaf]" />
                   </div>
                 </div>
-                <h3 className="text-xl font-light mb-4 text-center tracking-wide">
+                <h3 className="text-xl font-serif font-light mb-4 text-center tracking-wide">
                   Řidič
                 </h3>
                 <div className="flex items-center mb-3 justify-center">
