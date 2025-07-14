@@ -12,6 +12,7 @@ import { useEffect, useRef, useState } from 'react';
 
 export default function WeddingPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const thankYouCardRef = useRef<HTMLDivElement>(null);
 
@@ -71,15 +72,6 @@ export default function WeddingPage() {
                   Dress code
                 </a>
               </li>
-              {/* <li>
-                <a
-                  href="#zasedaci-poradek"
-                  className="text-sm font-light tracking-wide hover:text-[#d5bdaf] transition-colors text-[#986b50]"
-                >
-                  Zasedací pořádek
-                </a>
-              </li> */}
-
               <li>
                 <a
                   href="#rsvp"
@@ -96,23 +88,87 @@ export default function WeddingPage() {
                   Kontakty
                 </a>
               </li>
-              {/* <li>
-                <a
-                  href="#faq"
-                  className="text-sm font-light tracking-wide hover:text-[#d5bdaf] transition-colors text-[#986b50]"
-                >
-                  FAQ
-                </a>
-              </li> */}
             </ul>
             <Button
               variant="outline"
               size="sm"
               className="md:hidden border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-white"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               Menu
             </Button>
           </nav>
+
+          {/* Mobile Menu */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden bg-white/95 backdrop-blur-sm border-t border-white/20 absolute left-0 right-0 top-16 shadow-lg">
+              <ul className="flex flex-col py-4">
+                <li>
+                  <a
+                    href="#uvod"
+                    className="block px-4 py-3 text-base font-medium tracking-wide hover:text-[#d4af37] hover:bg-[#d4af37]/10 transition-colors text-[#5d4e37]"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Úvod
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#misto"
+                    className="block px-4 py-3 text-base font-medium tracking-wide hover:text-[#d4af37] hover:bg-[#d4af37]/10 transition-colors text-[#5d4e37]"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Místo
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#program"
+                    className="block px-4 py-3 text-base font-medium tracking-wide hover:text-[#d4af37] hover:bg-[#d4af37]/10 transition-colors text-[#5d4e37]"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Program
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#doprava"
+                    className="block px-4 py-3 text-base font-medium tracking-wide hover:text-[#d4af37] hover:bg-[#d4af37]/10 transition-colors text-[#5d4e37]"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Doprava
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#dress-code"
+                    className="block px-4 py-3 text-base font-medium tracking-wide hover:text-[#d4af37] hover:bg-[#d4af37]/10 transition-colors text-[#5d4e37]"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Dress code
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#rsvp"
+                    className="block px-4 py-3 text-base font-medium tracking-wide hover:text-[#d4af37] hover:bg-[#d4af37]/10 transition-colors text-[#5d4e37]"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    RSVP
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#kontakty"
+                    className="block px-4 py-3 text-base font-medium tracking-wide hover:text-[#d4af37] hover:bg-[#d4af37]/10 transition-colors text-[#5d4e37]"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Kontakty
+                  </a>
+                </li>
+              </ul>
+            </div>
+          )}
         </div>
       </header>
 
