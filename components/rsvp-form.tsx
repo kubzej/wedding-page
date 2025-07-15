@@ -109,7 +109,7 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
 
         <div>
           <Label htmlFor="email" className="text-sm font-medium">
-            Email (nepovinné)
+            Email
           </Label>
           <Input
             id="email"
@@ -118,12 +118,13 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
             value={formData.email}
             onChange={handleChange}
             className="mt-1 bg-[#edede9]/30 border-[#d5bdaf]/20 focus:border-[#d5bdaf] focus:ring-[#d5bdaf]"
+            placeholder="Nepovinné"
           />
         </div>
 
         <div>
           <Label htmlFor="phone" className="text-sm font-medium">
-            Telefon (nepovinné)
+            Telefon
           </Label>
           <Input
             id="phone"
@@ -131,6 +132,7 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
             value={formData.phone}
             onChange={handleChange}
             className="mt-1 bg-[#edede9]/30 border-[#d5bdaf]/20 focus:border-[#d5bdaf] focus:ring-[#d5bdaf]"
+            placeholder="Nepovinné"
           />
         </div>
 
@@ -237,7 +239,7 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
                 className="h-4 w-4 text-[#d5bdaf] border-[#d5bdaf]/50 rounded focus:ring-[#d5bdaf]"
               />
               <Label htmlFor="accommodation" className="text-sm">
-                Mám zájem o ubytování přímom na Smrčinách
+                Mám zájem o ubytování přímo na Smrčinách
               </Label>
             </div>
           </>

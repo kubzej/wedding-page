@@ -380,7 +380,7 @@ export default function WeddingPage() {
                             </p>
                           </div>
                           <p className="mt-2 text-[#5d4e37]/70">
-                            Samotný obřad v zahradě
+                            Samotný obřad v zahradě.
                           </p>
                         </div>
                       </div>
@@ -403,7 +403,7 @@ export default function WeddingPage() {
                             </p>
                           </div>
                           <p className="mt-2 text-[#5d4e37]/70">
-                            Skupinové a párové focení, přesun na hostinu
+                            Skupinové a párové focení, přesun na hostinu.
                           </p>
                         </div>
                       </div>
@@ -422,11 +422,11 @@ export default function WeddingPage() {
                             </h3>
                             <div className="h-px w-12 bg-[#d4af37]/30 mx-4"></div>
                             <p className="text-lg font-medium text-[#5d4e37]">
-                              Svatební oběd
+                              Oběd
                             </p>
                           </div>
                           <p className="mt-2 text-[#5d4e37]/70">
-                            Svatební oběd s přípitkem
+                            Svatební hostina s přípitkem.
                           </p>
                         </div>
                       </div>
@@ -449,7 +449,7 @@ export default function WeddingPage() {
                             </p>
                           </div>
                           <p className="mt-2 text-[#5d4e37]/70">
-                            Po obědě dort, káva a zábava
+                            Po obědě dort, káva a zábava.
                           </p>
                         </div>
                       </div>
@@ -556,7 +556,7 @@ export default function WeddingPage() {
                   místě.
                 </p>
                 <p className="mb-4 text-[#5d4e37]/70">
-                  Prosíme o příjezd v dostatečnék předstihu, aby obřad mohl
+                  Prosíme o příjezd v dostatečném předstihu, aby obřad mohl
                   proběhnout bez zpoždění.
                 </p>
               </Card>
@@ -575,7 +575,7 @@ export default function WeddingPage() {
                   se seznámit a užít si společný čas před svatebním dnem.
                 </p>
                 <p className="text-[#5d4e37]/70">
-                  Prosíme, potvrďte svou účast v RSVP, abychom s vámi mohli
+                  Prosíme, potvrďte svou účast v RSVP, abychom s Vámi mohli
                   počítat.
                 </p>
               </Card>
@@ -591,13 +591,20 @@ export default function WeddingPage() {
                 </div>
                 <p className="mb-6 text-[#5d4e37]/90">
                   Máme k dispozici ubytování přímo na Smrčinách, kde se svatba
-                  koná. Budeme rádi, pokud nám dáte vědět svoje zda-li byste
-                  využili tuto možnost.
+                  koná. Budeme rádi, pokud nám dáte vědět, zda-li byste tuto
+                  možnost využili.
                 </p>
 
                 <p className="mb-6 text-[#5d4e37]/90">
-                  V případě naplnení kapacity Smrčin doporučíme a zařídíme
-                  ubytování přímo v Želivě.
+                  Ubytování na Smrčinách bychom chtěli spíše dopřát těm, kteří k
+                  nám pojedou z větší dálky a nebudou moci cestovat zpět domů po
+                  svatbě. Pro ostatní z okolí bude zařízen odvoz.
+                </p>
+
+                <p className="mb-6 text-[#5d4e37]/90">
+                  Upozorňujeme na to, že většina z pokojů je minimálně pro 3-4
+                  osoby a pokud by někdo nechtěl sdílet pokoj s někým dalším,
+                  můžeme doporučit ubytování v Želivě.
                 </p>
 
                 <div className="mt-6 p-4 bg-[#d4af37]/10 rounded-lg border-l-4 border-[#d4af37]">
