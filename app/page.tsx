@@ -6,7 +6,6 @@ import { MapPin, Clock, Car, Mail, Phone, Users, Shirt } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import RsvpForm from '@/components/rsvp-form';
-import CountdownTimer from '@/components/countdown-timer';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useEffect, useRef, useState } from 'react';
 
@@ -204,8 +203,6 @@ export default function WeddingPage() {
                 </span>
               </div>
             </div>
-
-            <CountdownTimer targetDate="2026-05-30T11:00:00" />
           </div>
         </section>
 
