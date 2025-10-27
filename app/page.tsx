@@ -449,7 +449,7 @@ export default function WeddingPage() {
                             </p>
                           </div>
                           <p className="mt-2 text-[#5d4e37]/70">
-                            Po obědě dort, káva a zábava.
+                            Krájení dortu, káva a zábava.
                           </p>
                         </div>
                       </div>
@@ -591,25 +591,25 @@ export default function WeddingPage() {
                 </div>
                 <p className="mb-6 text-[#5d4e37]/90">
                   Máme k dispozici ubytování přímo na Smrčinách, kde se svatba
-                  koná. Budeme rádi, pokud nám dáte vědět, zda-li byste tuto
+                  koná. Budeme rádi, pokud nám dáte vědět, zda byste tuto
                   možnost využili.
                 </p>
 
                 <p className="mb-6 text-[#5d4e37]/90">
                   Ubytování na Smrčinách bychom chtěli spíše dopřát těm, kteří k
                   nám pojedou z větší dálky a nebudou moci cestovat zpět domů po
-                  svatbě. Pro ostatní z okolí bude zařízen odvoz.
+                  svatbě. Pro ostatní z okolí bude zajištěn odvoz.
                 </p>
 
                 <p className="mb-6 text-[#5d4e37]/90">
-                  Upozorňujeme na to, že většina z pokojů je minimálně pro 3-4
-                  osoby a pokud by někdo nechtěl sdílet pokoj s někým dalším,
-                  můžeme doporučit ubytování v Želivě.
+                  Upozorňujeme, že většina pokojů je minimálně pro 3–4 osoby, a
+                  pokud by někdo nechtěl sdílet pokoj s někým dalším, můžeme
+                  doporučit ubytování v Želivě.
                 </p>
 
                 <div className="mt-6 p-4 bg-[#d4af37]/10 rounded-lg border-l-4 border-[#d4af37]">
                   <p className="text-[#5d4e37]/80 text-sm">
-                    <strong>Jak nám dát vědět:</strong> Svoje preference ohledně
+                    <strong>Jak nám dát vědět:</strong> Své preference ohledně
                     ubytování uveďte prosím v RSVP formuláři nebo nám napište
                     přímo. Rádi vám pomůžeme s organizací!
                   </p>
