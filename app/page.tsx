@@ -280,34 +280,31 @@ export default function WeddingPage() {
                 <div className="p-8">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                     <div className="flex items-start space-x-3">
-                      <MapPin className="h-5 w-5 text-[#d5bdaf] mt-0.5" />
+                      <MapPin className="h-5 w-5 text-[#d4af37] mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-medium">Adresa</p>
+                        <p className="font-medium text-[#5d4e37]">Adresa</p>
                         <p className="text-sm text-[#5d4e37]/70">
                           Želiv 91, 394 44 Želiv
                         </p>
                       </div>
                     </div>
+                    <Button
+                      asChild
+                      className="bg-[#d4af37] hover:bg-[#c9a332] text-white shadow-md"
+                    >
+                      <a
+                        href="https://www.google.com/maps/place/Smr%C4%8Diny+svatební+místo/@49.541958,15.2185712,17z/data=!3m1!4b1!4m6!3m5!1s0x470cf14049d12ab5:0xb2e4b09a4d8d8ca4!8m2!3d49.541958!4d15.2211461!16s%2Fg%2F11h0lcl5b2?entry=ttu"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2"
+                      >
+                        <MapPin className="h-4 w-4" />
+                        Otevřít v Google Maps
+                      </a>
+                    </Button>
                   </div>
                 </div>
               </Card>
-
-              <div className="mt-12">
-                <Card className="overflow-hidden border-none shadow-lg">
-                  <div className="h-96 relative">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2588.957285625909!2d15.218571221332809!3d49.541958257996825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470cf14049d12ab5%3A0xb2e4b09a4d8d8ca4!2zU21yxI1pbnkgc3ZhdGVibsOtIG3DrXN0bw!5e0!3m2!1sen!2scz!4v1747322762287!5m2!1sen!2scz"
-                      width="100%"
-                      height="100%"
-                      style={{ border: 0 }}
-                      allowFullScreen
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                      title="Mapa místa konání"
-                    ></iframe>
-                  </div>
-                </Card>
-              </div>
             </div>
           </div>
         </section>
