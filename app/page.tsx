@@ -60,7 +60,7 @@ export default function WeddingPage() {
                   href="#doprava"
                   className="text-base font-medium tracking-wide hover:text-[#d4af37] transition-colors text-[#5d4e37]"
                 >
-                  Doprava
+                  Doprava a ubytování
                 </a>
               </li>
               <li>
