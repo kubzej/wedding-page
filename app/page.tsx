@@ -135,7 +135,7 @@ export default function WeddingPage() {
                     className="block px-4 py-3 text-base font-medium tracking-wide hover:text-[#d4af37] hover:bg-[#d4af37]/10 transition-colors text-[#5d4e37]"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Doprava
+                    Doprava a ubytování
                   </a>
                 </li>
                 <li>
