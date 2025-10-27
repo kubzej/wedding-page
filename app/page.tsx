@@ -328,194 +328,147 @@ export default function WeddingPage() {
               <div className="h-px w-16 bg-gradient-to-r from-transparent via-[#d4af37] to-transparent"></div>
             </div>
 
-            <div className="max-w-4xl mx-auto">
-              <Card className="border-none shadow-lg bg-gradient-to-br from-[#faf7f2] to-[#f4e6d9] overflow-hidden">
+            <div className="max-w-3xl mx-auto">
+              <Card className="border-none shadow-lg bg-white/90 backdrop-blur-sm overflow-hidden">
                 <div className="p-8">
-                  <div className="relative">
-                    <div className="absolute left-4 top-0 bottom-0 w-px bg-[#d4af37]/30"></div>
-
-                    <div className="space-y-12 relative">
-                      <div className="flex">
-                        <div className="relative">
-                          <div className="h-8 w-8 rounded-full bg-[#d4af37] flex items-center justify-center text-white z-10 relative">
-                            <Clock className="h-4 w-4" />
-                          </div>
-                          <div className="absolute top-4 left-4 h-full w-px bg-[#d4af37]/30"></div>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0">
+                        <div className="h-10 w-10 rounded-full bg-[#d4af37] flex items-center justify-center">
+                          <Clock className="h-5 w-5 text-white" />
                         </div>
-                        <div className="ml-6">
-                          <div className="flex items-baseline">
-                            <h3 className="text-xl font-serif font-light tracking-wide text-[#5d4e37]">
-                              10:00–11:00
-                            </h3>
-                            <div className="h-px w-12 bg-[#d4af37]/30 mx-4"></div>
-                            <p className="text-lg font-medium text-[#5d4e37]">
-                              Příjezd, uvítání hostů
-                            </p>
-                          </div>
-                          <p className="mt-2 text-[#5d4e37]/70">
-                            Neformální přivítání hostů, usazení a příprava na
-                            obřad.
+                      </div>
+                      <div className="flex-1 pt-1.5">
+                        <div className="flex items-baseline gap-3">
+                          <span className="text-base text-[#d4af37] font-medium min-w-[100px]">
+                            10:00–11:00
+                          </span>
+                          <p className="text-base text-[#5d4e37]">
+                            Příjezd, uvítání hostů
                           </p>
                         </div>
                       </div>
+                    </div>
 
-                      <div className="flex">
-                        <div className="relative">
-                          <div className="h-8 w-8 rounded-full bg-[#d4af37] flex items-center justify-center text-white z-10 relative">
-                            <Clock className="h-4 w-4" />
-                          </div>
-                          <div className="absolute top-4 left-4 h-full w-px bg-[#d4af37]/30"></div>
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0">
+                        <div className="h-10 w-10 rounded-full bg-[#d4af37] flex items-center justify-center">
+                          <Clock className="h-5 w-5 text-white" />
                         </div>
-                        <div className="ml-6">
-                          <div className="flex items-baseline">
-                            <h3 className="text-xl font-serif font-light tracking-wide text-[#5d4e37]">
-                              11:00–11:30
-                            </h3>
-                            <div className="h-px w-12 bg-[#d4af37]/30 mx-4"></div>
-                            <p className="text-lg font-medium text-[#5d4e37]">
-                              Svatební obřad
-                            </p>
-                          </div>
-                          <p className="mt-2 text-[#5d4e37]/70">
-                            Samotný obřad v zahradě.
+                      </div>
+                      <div className="flex-1 pt-1.5">
+                        <div className="flex items-baseline gap-3">
+                          <span className="text-base text-[#d4af37] font-medium min-w-[100px]">
+                            11:00–11:30
+                          </span>
+                          <p className="text-base text-[#5d4e37]">
+                            Svatební obřad
                           </p>
                         </div>
                       </div>
+                    </div>
 
-                      <div className="flex">
-                        <div className="relative">
-                          <div className="h-8 w-8 rounded-full bg-[#d4af37] flex items-center justify-center text-white z-10 relative">
-                            <Clock className="h-4 w-4" />
-                          </div>
-                          <div className="absolute top-4 left-4 h-full w-px bg-[#d4af37]/30"></div>
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0">
+                        <div className="h-10 w-10 rounded-full bg-[#d4af37] flex items-center justify-center">
+                          <Clock className="h-5 w-5 text-white" />
                         </div>
-                        <div className="ml-6">
-                          <div className="flex items-baseline">
-                            <h3 className="text-xl font-serif font-light tracking-wide text-[#5d4e37]">
-                              11:30–13:00
-                            </h3>
-                            <div className="h-px w-12 bg-[#d4af37]/30 mx-4"></div>
-                            <p className="text-lg font-medium text-[#5d4e37]">
-                              Gratulace & společné fotografování
-                            </p>
-                          </div>
-                          <p className="mt-2 text-[#5d4e37]/70">
-                            Skupinové a párové focení, přesun na hostinu.
+                      </div>
+                      <div className="flex-1 pt-1.5">
+                        <div className="flex items-baseline gap-3">
+                          <span className="text-base text-[#d4af37] font-medium min-w-[100px]">
+                            11:30–13:00
+                          </span>
+                          <p className="text-base text-[#5d4e37]">
+                            Gratulace & společné fotografování
                           </p>
                         </div>
                       </div>
+                    </div>
 
-                      <div className="flex">
-                        <div className="relative">
-                          <div className="h-8 w-8 rounded-full bg-[#d4af37] flex items-center justify-center text-white z-10 relative">
-                            <Clock className="h-4 w-4" />
-                          </div>
-                          <div className="absolute top-4 left-4 h-full w-px bg-[#d4af37]/30"></div>
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0">
+                        <div className="h-10 w-10 rounded-full bg-[#d4af37] flex items-center justify-center">
+                          <Clock className="h-5 w-5 text-white" />
                         </div>
-                        <div className="ml-6">
-                          <div className="flex items-baseline">
-                            <h3 className="text-xl font-serif font-light tracking-wide text-[#5d4e37]">
-                              13:00-14:00
-                            </h3>
-                            <div className="h-px w-12 bg-[#d4af37]/30 mx-4"></div>
-                            <p className="text-lg font-medium text-[#5d4e37]">
-                              Oběd
-                            </p>
-                          </div>
-                          <p className="mt-2 text-[#5d4e37]/70">
-                            Svatební hostina s přípitkem.
+                      </div>
+                      <div className="flex-1 pt-1.5">
+                        <div className="flex items-baseline gap-3">
+                          <span className="text-base text-[#d4af37] font-medium min-w-[100px]">
+                            13:00–14:00
+                          </span>
+                          <p className="text-base text-[#5d4e37]">Oběd</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0">
+                        <div className="h-10 w-10 rounded-full bg-[#d4af37] flex items-center justify-center">
+                          <Clock className="h-5 w-5 text-white" />
+                        </div>
+                      </div>
+                      <div className="flex-1 pt-1.5">
+                        <div className="flex items-baseline gap-3">
+                          <span className="text-base text-[#d4af37] font-medium min-w-[100px]">
+                            14:00–17:00
+                          </span>
+                          <p className="text-base text-[#5d4e37]">
+                            Dort, káva a zábava
                           </p>
                         </div>
                       </div>
+                    </div>
 
-                      <div className="flex">
-                        <div className="relative">
-                          <div className="h-8 w-8 rounded-full bg-[#d4af37] flex items-center justify-center text-white z-10 relative">
-                            <Clock className="h-4 w-4" />
-                          </div>
-                          <div className="absolute top-4 left-4 h-full w-px bg-[#d4af37]/30"></div>
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0">
+                        <div className="h-10 w-10 rounded-full bg-[#d4af37] flex items-center justify-center">
+                          <Clock className="h-5 w-5 text-white" />
                         </div>
-                        <div className="ml-6">
-                          <div className="flex items-baseline">
-                            <h3 className="text-xl font-serif font-light tracking-wide text-[#5d4e37]">
-                              14:00–17:00
-                            </h3>
-                            <div className="h-px w-12 bg-[#d4af37]/30 mx-4"></div>
-                            <p className="text-lg font-medium text-[#5d4e37]">
-                              Dort, káva a zábava
-                            </p>
-                          </div>
-                          <p className="mt-2 text-[#5d4e37]/70">
-                            Krájení dortu, káva a zábava.
+                      </div>
+                      <div className="flex-1 pt-1.5">
+                        <div className="flex items-baseline gap-3">
+                          <span className="text-base text-[#d4af37] font-medium min-w-[100px]">
+                            17:00–18:30
+                          </span>
+                          <p className="text-base text-[#5d4e37]">
+                            Lehké občerstvení, raut
                           </p>
                         </div>
                       </div>
+                    </div>
 
-                      <div className="flex">
-                        <div className="relative">
-                          <div className="h-8 w-8 rounded-full bg-[#d4af37] flex items-center justify-center text-white z-10 relative">
-                            <Clock className="h-4 w-4" />
-                          </div>
-                          <div className="absolute top-4 left-4 h-full w-px bg-[#d4af37]/30"></div>
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0">
+                        <div className="h-10 w-10 rounded-full bg-[#d4af37] flex items-center justify-center">
+                          <Clock className="h-5 w-5 text-white" />
                         </div>
-                        <div className="ml-6">
-                          <div className="flex items-baseline">
-                            <h3 className="text-xl font-serif font-light tracking-wide text-[#5d4e37]">
-                              17:00–18:30
-                            </h3>
-                            <div className="h-px w-12 bg-[#d4af37]/30 mx-4"></div>
-                            <p className="text-lg font-medium text-[#5d4e37]">
-                              Lehké občerstvení, raut
-                            </p>
-                          </div>
-                          <p className="mt-2 text-[#5d4e37]/70">
-                            Odpolední raut, posezení, neformální povídání,
-                            příprava na večer.
+                      </div>
+                      <div className="flex-1 pt-1.5">
+                        <div className="flex items-baseline gap-3">
+                          <span className="text-base text-[#d4af37] font-medium min-w-[100px]">
+                            18:30–19:00
+                          </span>
+                          <p className="text-base text-[#5d4e37]">
+                            První tanec a zahájení večera
                           </p>
                         </div>
                       </div>
+                    </div>
 
-                      <div className="flex">
-                        <div className="relative">
-                          <div className="h-8 w-8 rounded-full bg-[#d4af37] flex items-center justify-center text-white z-10 relative">
-                            <Clock className="h-4 w-4" />
-                          </div>
-                          <div className="absolute top-4 left-4 h-full w-px bg-[#d4af37]/30"></div>
-                        </div>
-                        <div className="ml-6">
-                          <div className="flex items-baseline">
-                            <h3 className="text-xl font-serif font-light tracking-wide text-[#5d4e37]">
-                              18:30–19:00
-                            </h3>
-                            <div className="h-px w-12 bg-[#d4af37]/30 mx-4"></div>
-                            <p className="text-lg font-medium text-[#5d4e37]">
-                              První tanec a zahájení večera
-                            </p>
-                          </div>
-                          <p className="mt-2 text-[#5d4e37]/70">
-                            První tanec novomanželů, zahájení večerní zábavy.
-                          </p>
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0">
+                        <div className="h-10 w-10 rounded-full bg-[#d4af37] flex items-center justify-center">
+                          <Clock className="h-5 w-5 text-white" />
                         </div>
                       </div>
-
-                      <div className="flex">
-                        <div className="relative">
-                          <div className="h-8 w-8 rounded-full bg-[#d4af37] flex items-center justify-center text-white z-10 relative">
-                            <Clock className="h-4 w-4" />
-                          </div>
-                        </div>
-                        <div className="ml-6">
-                          <div className="flex items-baseline">
-                            <h3 className="text-xl font-serif font-light tracking-wide text-[#5d4e37]">
-                              19:00+
-                            </h3>
-                            <div className="h-px w-12 bg-[#d4af37]/30 mx-4"></div>
-                            <p className="text-lg font-medium text-[#5d4e37]">
-                              Večerní zábava
-                            </p>
-                          </div>
-                          <p className="mt-2 text-[#5d4e37]/70">
-                            Hudba, tanec a oslava až do pozdních hodin.
+                      <div className="flex-1 pt-1.5">
+                        <div className="flex items-baseline gap-3">
+                          <span className="text-base text-[#d4af37] font-medium min-w-[100px]">
+                            19:00+
+                          </span>
+                          <p className="text-base text-[#5d4e37]">
+                            Večerní zábava
                           </p>
                         </div>
                       </div>
