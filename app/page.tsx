@@ -586,76 +586,29 @@ export default function WeddingPage() {
             </div>
 
             <div className="max-w-4xl mx-auto">
-              <Card className="overflow-hidden border-none shadow-lg bg-gradient-to-br from-[#faf7f2] to-[#f4e6d9]">
+              <Card className="overflow-hidden border-none shadow-lg bg-white/90 backdrop-blur-sm">
                 <div className="md:grid md:grid-cols-2">
                   <div className="p-8">
                     <div className="flex items-center mb-6">
-                      <Shirt className="h-6 w-6 text-[#d4af37] mr-3" />
+                      <Shirt className="h-6 w-6 text-[#d4af37] mr-3 flex-shrink-0" />
                       <h3 className="text-xl font-serif font-medium tracking-wide text-[#5d4e37]">
                         Formální elegance
                       </h3>
                     </div>
 
-                    <p className="mb-6 text-[#5d4e37]/80 leading-relaxed">
-                      Prosíme hosty o formální oblečení odpovídající slavnostní
+                    <p className="mb-8 text-[#5d4e37]/80 leading-relaxed">
+                      Prosíme Vás o formální oblečení odpovídající slavnostní
                       příležitosti. Pánové oblek, dámy šaty nebo kostýmek.
                     </p>
 
                     <div className="space-y-6">
                       <div>
-                        <h4 className="font-serif font-medium mb-4 text-[#5d4e37]">
-                          Preferované barvy
+                        <h4 className="font-serif font-medium mb-3 text-[#5d4e37]">
+                          Barvy
                         </h4>
-                        <div className="grid grid-cols-5 gap-3 mb-4">
-                          <div className="text-center">
-                            <div
-                              className="h-12 w-12 rounded-full bg-[#faf7f2] ring-2 ring-[#d4af37] ring-offset-2 mx-auto shadow-sm"
-                              title="Cream"
-                            ></div>
-                            <p className="text-xs mt-2 text-[#5d4e37]/60">
-                              Cream
-                            </p>
-                          </div>
-                          <div className="text-center">
-                            <div
-                              className="h-12 w-12 rounded-full bg-[#f4e6d9] ring-2 ring-[#d4af37] ring-offset-2 mx-auto shadow-sm"
-                              title="Blush"
-                            ></div>
-                            <p className="text-xs mt-2 text-[#5d4e37]/60">
-                              Blush
-                            </p>
-                          </div>
-                          <div className="text-center">
-                            <div
-                              className="h-12 w-12 rounded-full bg-[#e8c5a0] ring-2 ring-[#d4af37] ring-offset-2 mx-auto shadow-sm"
-                              title="Sage"
-                            ></div>
-                            <p className="text-xs mt-2 text-[#5d4e37]/60">
-                              Sage
-                            </p>
-                          </div>
-                          <div className="text-center">
-                            <div
-                              className="h-12 w-12 rounded-full bg-[#a8b5a0] ring-2 ring-[#d4af37] ring-offset-2 mx-auto shadow-sm"
-                              title="Sage Green"
-                            ></div>
-                            <p className="text-xs mt-2 text-[#5d4e37]/60">
-                              Sage
-                            </p>
-                          </div>
-                          <div className="text-center">
-                            <div
-                              className="h-12 w-12 rounded-full bg-[#d4af37] ring-2 ring-[#d4af37] ring-offset-2 mx-auto shadow-sm"
-                              title="Gold"
-                            ></div>
-                            <p className="text-xs mt-2 text-[#5d4e37]/60">
-                              Gold
-                            </p>
-                          </div>
-                        </div>
-                        <p className="text-sm text-[#5d4e37]/70 bg-white/50 p-3 rounded-lg">
-                          Barevná paleta svatby je v neutrálních, přírodních
-                          tónech.
+                        <p className="text-[#5d4e37]/80 leading-relaxed">
+                          Preferujeme pastelové barvy, které budou ladit s
+                          celkovou atmosférou svatby.
                         </p>
                       </div>
 
@@ -664,18 +617,20 @@ export default function WeddingPage() {
                           Prosíme vyhnout se
                         </h4>
                         <div className="bg-white/50 p-4 rounded-lg">
-                          <ul className="space-y-2 text-sm text-[#5d4e37]/80">
-                            <li className="flex items-center">
-                              <span className="w-2 h-2 bg-[#d4af37] rounded-full mr-3"></span>
-                              Čistě bílé oblečení (vyhrazeno pro nevěstu)
+                          <ul className="space-y-2 text-sm text-[#5d4e37]/70">
+                            <li className="flex items-start">
+                              <span className="w-2 h-2 bg-[#d4af37] rounded-full mr-3 mt-1.5 flex-shrink-0"></span>
+                              <span>
+                                Čistě bílé oblečení (vyhrazeno pro nevěstu)
+                              </span>
                             </li>
-                            <li className="flex items-center">
-                              <span className="w-2 h-2 bg-[#d4af37] rounded-full mr-3"></span>
-                              Příliš výrazným a zářivým barvám
+                            <li className="flex items-start">
+                              <span className="w-2 h-2 bg-[#d4af37] rounded-full mr-3 mt-1.5 flex-shrink-0"></span>
+                              <span>Příliš výrazným a zářivým barvám</span>
                             </li>
-                            <li className="flex items-center">
-                              <span className="w-2 h-2 bg-[#d4af37] rounded-full mr-3"></span>
-                              Džínám a neformálnímu oblečení
+                            <li className="flex items-start">
+                              <span className="w-2 h-2 bg-[#d4af37] rounded-full mr-3 mt-1.5 flex-shrink-0"></span>
+                              <span>Džínám a neformálnímu oblečení</span>
                             </li>
                           </ul>
                         </div>
@@ -686,16 +641,16 @@ export default function WeddingPage() {
                   <div className="relative bg-gradient-to-br from-[#f4e6d9] to-[#faf7f2]">
                     <div className="h-full flex items-center justify-center p-8">
                       <div className="text-center">
-                        <div className="mx-auto mb-6 bg-white/30 backdrop-blur-sm rounded-2xl p-3 shadow-lg w-48">
+                        <div className="mx-auto mb-6 bg-white/30 backdrop-blur-sm rounded-2xl p-3 shadow-lg w-72">
                           <Image
                             src="/dress-code.png"
                             alt="Dress code illustration"
-                            width={200}
-                            height={200}
+                            width={288}
+                            height={288}
                             className="w-full h-auto object-contain rounded-lg"
                           />
                         </div>
-                        <h4 className="text-lg font-script text-[#d4af37] mb-2">
+                        <h4 className="text-lg font-script text-[#d4af37]">
                           Elegant & Timeless
                         </h4>
                       </div>
