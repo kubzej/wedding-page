@@ -152,7 +152,7 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
             <div className="flex items-center space-x-2">
               <RadioGroupItem value="no" id="no" className="text-[#d5bdaf]" />
               <Label htmlFor="no" className="text-sm">
-                Bohužel se nemohu zúčastnit
+                Ne, bohužel se nemohu zúčastnit
               </Label>
             </div>
           </RadioGroup>
