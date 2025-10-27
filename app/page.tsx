@@ -790,7 +790,7 @@ export default function WeddingPage() {
                 </h3>
                 <div className="flex items-center mb-3 justify-center">
                   <Phone className="h-5 w-5 text-[#d5bdaf] mr-3" />
-                  <p className="text-[#5d4e37]/70">+420 456 789 123</p>
+                  <p className="text-[#5d4e37]/70">+420 XXX XXX XXX</p>
                 </div>
                 <div className="flex items-center justify-center">
                   <Clock className="h-5 w-5 text-[#d5bdaf] mr-3" />
