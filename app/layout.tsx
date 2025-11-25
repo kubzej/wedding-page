@@ -4,6 +4,7 @@ import {
   Playfair_Display,
   Source_Sans_3,
   Dancing_Script,
+  Bodoni_Moda,
 } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
@@ -29,6 +30,13 @@ const dancingScript = Dancing_Script({
   variable: '--font-dancing-script',
 });
 
+// Wedding hero font
+const bodoniModa = Bodoni_Moda({
+  subsets: ['latin', 'latin-ext'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-bodoni-moda',
+});
+
 export const metadata: Metadata = {
   title: 'Tereza & Jakub | Svatební stránka',
   description: 'Svatební stránka Terezy a Jakuba',
@@ -42,7 +50,7 @@ export default function RootLayout({
   return (
     <html lang="cs" suppressHydrationWarning>
       <body
-        className={`${sourceSans.className} ${playfairDisplay.variable} ${sourceSans.variable} ${dancingScript.variable}`}
+        className={`${sourceSans.className} ${playfairDisplay.variable} ${sourceSans.variable} ${dancingScript.variable} ${bodoniModa.variable}`}
       >
         <ThemeProvider
           attribute="class"
