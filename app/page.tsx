@@ -4,7 +4,6 @@ import type React from 'react';
 import Image from 'next/image';
 import { MapPin, Clock, Car, Mail, Phone, Users, Shirt } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
 import RsvpForm from '@/components/rsvp-form';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useEffect, useRef, useState } from 'react';
@@ -22,19 +21,19 @@ export default function WeddingPage() {
   }, [isSubmitted]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-zinc-100 via-zinc-50 to-zinc-100">
       {/* Fixed Navigation */}
-      <header className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md z-50 border-b border-orange-200/30 shadow-sm">
+      <header className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md z-50 border-b border-gray-200/30 shadow-sm">
         <div className="container mx-auto px-4">
           <nav className="flex items-center justify-between h-16">
-            <div className="text-2xl font-script tracking-wide text-orange-600">
+            <div className="text-2xl font-bodoni-moda tracking-wide text-gray-900">
               T & J
             </div>
             <ul className="hidden md:flex space-x-8">
               <li>
                 <a
                   href="#uvod"
-                  className="text-base font-medium tracking-wide hover:text-orange-600 transition-colors text-gray-700"
+                  className="text-base font-medium tracking-wide hover:text-gray-900 transition-colors text-gray-700 font-bodoni-moda"
                 >
                   Úvod
                 </a>
@@ -42,7 +41,7 @@ export default function WeddingPage() {
               <li>
                 <a
                   href="#misto"
-                  className="text-base font-medium tracking-wide hover:text-orange-600 transition-colors text-gray-700"
+                  className="text-base font-medium tracking-wide hover:text-gray-900 transition-colors text-gray-700 font-bodoni-moda"
                 >
                   Místo
                 </a>
@@ -50,7 +49,7 @@ export default function WeddingPage() {
               <li>
                 <a
                   href="#program"
-                  className="text-base font-medium tracking-wide hover:text-orange-600 transition-colors text-gray-700"
+                  className="text-base font-medium tracking-wide hover:text-gray-900 transition-colors text-gray-700 font-bodoni-moda"
                 >
                   Program
                 </a>
@@ -58,7 +57,7 @@ export default function WeddingPage() {
               <li>
                 <a
                   href="#doprava"
-                  className="text-base font-medium tracking-wide hover:text-orange-600 transition-colors text-gray-700"
+                  className="text-base font-medium tracking-wide hover:text-gray-900 transition-colors text-gray-700 font-bodoni-moda"
                 >
                   Doprava a ubytování
                 </a>
@@ -66,7 +65,7 @@ export default function WeddingPage() {
               <li>
                 <a
                   href="#dress-code"
-                  className="text-base font-medium tracking-wide hover:text-orange-600 transition-colors text-gray-700"
+                  className="text-base font-medium tracking-wide hover:text-gray-900 transition-colors text-gray-700 font-bodoni-moda"
                 >
                   Dress code
                 </a>
@@ -74,7 +73,7 @@ export default function WeddingPage() {
               <li>
                 <a
                   href="#rsvp"
-                  className="text-base font-medium tracking-wide hover:text-orange-600 transition-colors text-gray-700"
+                  className="text-base font-medium tracking-wide hover:text-gray-900 transition-colors text-gray-700 font-bodoni-moda"
                 >
                   RSVP
                 </a>
@@ -82,7 +81,7 @@ export default function WeddingPage() {
               <li>
                 <a
                   href="#kontakty"
-                  className="text-base font-medium tracking-wide hover:text-orange-600 transition-colors text-gray-700"
+                  className="text-base font-medium tracking-wide hover:text-gray-900 transition-colors text-gray-700 font-bodoni-moda"
                 >
                   Kontakty
                 </a>
@@ -91,7 +90,7 @@ export default function WeddingPage() {
             <Button
               variant="outline"
               size="sm"
-              className="md:hidden border-orange-300 text-orange-600 hover:bg-orange-600 hover:text-white"
+              className="md:hidden border-gray-300 text-gray-900 hover:bg-gray-900 hover:text-white"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               Menu
@@ -100,12 +99,12 @@ export default function WeddingPage() {
 
           {/* Mobile Menu */}
           {isMobileMenuOpen && (
-            <div className="md:hidden bg-gray-50 backdrop-blur-sm border-t border-white/20 absolute left-0 right-0 top-16 shadow-xl border border-orange-200/50 backdrop-blur-sm">
+            <div className="md:hidden bg-zinc-50 backdrop-blur-sm border-t border-white/20 absolute left-0 right-0 top-16 shadow-xl shadow-md/50 backdrop-blur-sm">
               <ul className="flex flex-col py-4">
                 <li>
                   <a
                     href="#uvod"
-                    className="block px-4 py-3 text-base font-medium tracking-wide hover:text-orange-600 hover:bg-orange-600/10 transition-colors text-gray-700"
+                    className="block px-4 py-3 text-base font-medium tracking-wide hover:text-gray-900 hover:bg-gray-900/10 transition-colors text-gray-700 font-bodoni-moda"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Úvod
@@ -114,7 +113,7 @@ export default function WeddingPage() {
                 <li>
                   <a
                     href="#misto"
-                    className="block px-4 py-3 text-base font-medium tracking-wide hover:text-orange-600 hover:bg-orange-600/10 transition-colors text-gray-700"
+                    className="block px-4 py-3 text-base font-medium tracking-wide hover:text-gray-900 hover:bg-gray-900/10 transition-colors text-gray-700 font-bodoni-moda"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Místo
@@ -123,7 +122,7 @@ export default function WeddingPage() {
                 <li>
                   <a
                     href="#program"
-                    className="block px-4 py-3 text-base font-medium tracking-wide hover:text-orange-600 hover:bg-orange-600/10 transition-colors text-gray-700"
+                    className="block px-4 py-3 text-base font-medium tracking-wide hover:text-gray-900 hover:bg-gray-900/10 transition-colors text-gray-700 font-bodoni-moda"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Program
@@ -132,7 +131,7 @@ export default function WeddingPage() {
                 <li>
                   <a
                     href="#doprava"
-                    className="block px-4 py-3 text-base font-medium tracking-wide hover:text-orange-600 hover:bg-orange-600/10 transition-colors text-gray-700"
+                    className="block px-4 py-3 text-base font-medium tracking-wide hover:text-gray-900 hover:bg-gray-900/10 transition-colors text-gray-700 font-bodoni-moda"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Doprava a ubytování
@@ -141,7 +140,7 @@ export default function WeddingPage() {
                 <li>
                   <a
                     href="#dress-code"
-                    className="block px-4 py-3 text-base font-medium tracking-wide hover:text-orange-600 hover:bg-orange-600/10 transition-colors text-gray-700"
+                    className="block px-4 py-3 text-base font-medium tracking-wide hover:text-gray-900 hover:bg-gray-900/10 transition-colors text-gray-700 font-bodoni-moda"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Dress code
@@ -150,7 +149,7 @@ export default function WeddingPage() {
                 <li>
                   <a
                     href="#rsvp"
-                    className="block px-4 py-3 text-base font-medium tracking-wide hover:text-orange-600 hover:bg-orange-600/10 transition-colors text-gray-700"
+                    className="block px-4 py-3 text-base font-medium tracking-wide hover:text-gray-900 hover:bg-gray-900/10 transition-colors text-gray-700 font-bodoni-moda"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     RSVP
@@ -159,7 +158,7 @@ export default function WeddingPage() {
                 <li>
                   <a
                     href="#kontakty"
-                    className="block px-4 py-3 text-base font-medium tracking-wide hover:text-orange-600 hover:bg-orange-600/10 transition-colors text-gray-700"
+                    className="block px-4 py-3 text-base font-medium tracking-wide hover:text-gray-900 hover:bg-gray-900/10 transition-colors text-gray-700 font-bodoni-moda"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Kontakty
@@ -173,62 +172,41 @@ export default function WeddingPage() {
 
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="relative h-[100vh] flex items-center justify-center bg-[url('/main.png')] bg-cover bg-center">
-          <div className="absolute inset-0 bg-black/30"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/50"></div>
+        <section className="relative h-[100vh] flex items-center justify-center bg-[url('/main.png')] bg-cover bg-center md:bg-center bg-[center_right_-160px]">
+          <div className="absolute inset-0 bg-black/40"></div>
           <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-            <h1 className="text-6xl md:text-8xl font-script font-light mb-6 tracking-wide drop-shadow-xl">
+            <h1 className="font-bodoni-moda text-6xl md:text-8xl font-bold mb-6 drop-shadow-2xl">
               Tereza & Jakub
             </h1>
 
-            <div className="flex items-center justify-center mb-8">
+            <div className="flex items-center justify-center">
               <div className="h-px w-16 bg-white/40"></div>
-              <p className="text-2xl md:text-3xl font-script text-white/95 mx-6 tracking-wide">
+              <p className="text-2xl md:text-3xl font-bodoni-moda text-white/95 mx-6 drop-shadow-xl">
                 30. května 2026
               </p>
               <div className="h-px w-16 bg-white/40"></div>
-            </div>
-
-            <div className="flex flex-col items-center justify-center space-y-4 mb-12">
-              <div className="flex items-center justify-center space-x-4">
-                <MapPin className="h-5 w-5" />
-                <span className="text-xl font-script font-light tracking-wide">
-                  Smrčiny
-                </span>
-              </div>
-              <div className="flex items-center justify-center space-x-4">
-                <Clock className="h-5 w-5" />
-                <span className="text-xl font-script font-light tracking-wide">
-                  11:00
-                </span>
-              </div>
             </div>
           </div>
         </section>
 
         {/* Introduction */}
-        <section id="uvod" className="py-24 bg-gray-50">
+        <section id="uvod" className="py-20 bg-zinc-50">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <div className="flex items-center justify-center mb-12">
-                <div className="h-px w-16 bg-gradient-to-r from-transparent via-[#ea580c] to-transparent"></div>
-                <div className="flex flex-col items-center mx-6">
-                  <h2 className="text-4xl font-serif font-semibold tracking-tight text-gray-900 mb-2">
-                    Náš příběh
-                  </h2>
-                </div>
-                <div className="h-px w-16 bg-gradient-to-r from-transparent via-[#ea580c] to-transparent"></div>
-              </div>
-
-              <div className="prose prose-lg mx-auto text-gray-900">
-                <p className="text-xl mb-8 font-light leading-relaxed text-gray-700">
-                  Milí přátelé a rodino, s radostí Vás zveme na náš svatební
-                  den. Po letech společného života jsme se rozhodli zpečetit náš
-                  vztah manželským slibem.
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bodoni-moda font-bold text-gray-900 mb-8">
+                Náš příběh
+              </h2>
+              <div className="space-y-4">
+                <p className="font-bodoni-moda text-base leading-relaxed text-gray-700">
+                  Naše cesty se propojily před lety… a od té doby jsme spolu
+                  ušli pořádný kus života. Teď nastal okamžik udělat další krok
+                  – slíbit si lásku před vámi všemi. Srdečně vás zveme, abyste
+                  byli součástí našeho dne, kdy píšeme další kapitolu našeho
+                  příběhu.
                 </p>
-                <p className="text-xl font-light leading-relaxed text-gray-600">
-                  Budeme rádi, když tento výjimečný den oslavíte společně s
-                  námi. Níže najdete všechny potřebné informace.
+                <p className="font-bodoni-moda text-base leading-relaxed text-gray-700">
+                  Všechny potřebné informace o svatbě najdete níže – těšíme se
+                  na vás!
                 </p>
               </div>
             </div>
@@ -236,22 +214,13 @@ export default function WeddingPage() {
         </section>
 
         {/* Venue */}
-        <section
-          id="misto"
-          className="py-24 bg-gray-100 relative overflow-hidden"
-        >
+        <section id="misto" className="py-16 bg-white relative overflow-hidden">
           <div className="container mx-auto px-4">
-            <div className="flex items-center justify-center mb-12">
-              <div className="h-px w-16 bg-gradient-to-r from-transparent via-[#ea580c] to-transparent"></div>
-              <div className="flex flex-col items-center mx-6">
-                <h2 className="text-4xl font-serif font-semibold tracking-tight text-gray-900 mb-2">
-                  Místo konání
-                </h2>
-              </div>
-              <div className="h-px w-16 bg-gradient-to-r from-transparent via-[#ea580c] to-transparent"></div>
-            </div>
             <div className="max-w-4xl mx-auto">
-              <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+              <h2 className="text-3xl md:text-4xl font-bodoni-moda font-bold text-gray-900 mb-12">
+                Místo konání
+              </h2>
+              <div className="rounded-xl overflow-hidden">
                 <div className="h-96 relative">
                   <Image
                     src="/smrciny.png?height=800&width=1200"
@@ -261,10 +230,10 @@ export default function WeddingPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                    <h3 className="text-3xl font-serif font-light mb-2 tracking-wide">
+                    <h3 className="text-3xl font-bodoni-moda font-bold mb-2">
                       Smrčiny
                     </h3>
-                    <p className="font-light opacity-90 text-lg">
+                    <p className="text-lg font-bodoni-moda">
                       Obřad i hostina na jednom kouzelném místě
                     </p>
                   </div>
@@ -272,21 +241,25 @@ export default function WeddingPage() {
                 <div className="p-8 bg-white">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                     <div className="flex items-start space-x-3">
-                      <MapPin className="h-5 w-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                      <MapPin className="h-5 w-5 text-gray-900 mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold text-gray-900">Adresa</p>
-                        <p className="text-gray-600">Želiv 91, 394 44 Želiv</p>
+                        <p className="font-semibold text-gray-900 font-bodoni-moda">
+                          Adresa
+                        </p>
+                        <p className="text-gray-600 font-bodoni-moda">
+                          Želiv 91, 394 44 Želiv
+                        </p>
                       </div>
                     </div>
                     <Button
                       asChild
-                      className="bg-orange-600 hover:bg-orange-700 text-white shadow-lg hover:shadow-xl transition-all"
+                      className="bg-gray-900 hover:bg-black text-white"
                     >
                       <a
                         href="https://www.google.com/maps/place/Smr%C4%8Diny+svatební+místo/@49.541958,15.2185712,17z/data=!3m1!4b1!4m6!3m5!1s0x470cf14049d12ab5:0xb2e4b09a4d8d8ca4!8m2!3d49.541958!4d15.2211461!16s%2Fg%2F11h0lcl5b2?entry=ttu"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2"
+                        className="flex items-center gap-2 font-bodoni-moda"
                       >
                         <MapPin className="h-4 w-4" />
                         Otevřít v Google Maps
@@ -300,105 +273,144 @@ export default function WeddingPage() {
         </section>
 
         {/* Program */}
-        <section id="program" className="py-24 bg-gray-50">
+        <section id="program" className="py-16 bg-zinc-50">
           <div className="container mx-auto px-4">
-            <div className="flex items-center justify-center mb-12">
-              <div className="h-px w-16 bg-gradient-to-r from-transparent via-[#ea580c] to-transparent"></div>
-              <div className="flex flex-col items-center mx-6">
-                <h2 className="text-4xl font-serif font-semibold tracking-tight text-gray-900 mb-2">
-                  Program dne
-                </h2>
-              </div>
-              <div className="h-px w-16 bg-gradient-to-r from-transparent via-[#ea580c] to-transparent"></div>
-            </div>
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bodoni-moda font-bold text-gray-900 mb-12">
+                Program dne
+              </h2>
 
-            <div className="max-w-3xl mx-auto">
-              <div className="space-y-0">
-                <div className="grid grid-cols-[auto_1fr] gap-6 items-center py-6 border-b border-orange-200/50">
-                  <span className="text-orange-600 font-semibold text-lg text-right whitespace-nowrap">
-                    10:00–11:00
-                  </span>
-                  <div className="flex items-center gap-4">
-                    <span className="text-orange-300">•</span>
-                    <p className="text-gray-700 text-lg">
-                      Příjezd, uvítání hostů
-                    </p>
+              <div className="relative max-w-2xl mx-auto">
+                {/* Central vertical timeline */}
+                <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gray-900 -translate-x-1/2"></div>
+
+                <div className="space-y-12">
+                  {/* Left side */}
+                  <div className="flex items-center gap-8">
+                    <div className="flex-1 text-right pr-8">
+                      <div className="text-gray-900 font-bold text-lg mb-1 tracking-wide font-bodoni-moda">
+                        10:00–11:00
+                      </div>
+                      <div className="text-gray-600 uppercase text-sm tracking-wider font-bodoni-moda">
+                        Příjezd, uvítání hostů
+                      </div>
+                    </div>
+                    <div className="relative z-10">
+                      <div className="w-3 h-3 bg-gray-900 rounded-full"></div>
+                    </div>
+                    <div className="flex-1 pl-8"></div>
                   </div>
-                </div>
 
-                <div className="grid grid-cols-[auto_1fr] gap-6 items-center py-6 border-b border-orange-200/50">
-                  <span className="text-orange-600 font-semibold text-lg text-right whitespace-nowrap">
-                    11:00–11:30
-                  </span>
-                  <div className="flex items-center gap-4">
-                    <span className="text-orange-300">•</span>
-                    <p className="text-gray-700 text-lg">Svatební obřad</p>
+                  {/* Right side */}
+                  <div className="flex items-center gap-8">
+                    <div className="flex-1 pr-8"></div>
+                    <div className="relative z-10">
+                      <div className="w-3 h-3 bg-gray-900 rounded-full"></div>
+                    </div>
+                    <div className="flex-1 text-left pl-8">
+                      <div className="text-gray-900 font-bold text-lg mb-1 tracking-wide font-bodoni-moda">
+                        11:00–11:30
+                      </div>
+                      <div className="text-gray-600 uppercase text-sm tracking-wider font-bodoni-moda">
+                        Svatební obřad
+                      </div>
+                    </div>
                   </div>
-                </div>
 
-                <div className="grid grid-cols-[auto_1fr] gap-6 items-center py-6 border-b border-orange-200/50">
-                  <span className="text-orange-600 font-semibold text-lg text-right whitespace-nowrap">
-                    11:30–13:00
-                  </span>
-                  <div className="flex items-center gap-4">
-                    <span className="text-orange-300">•</span>
-                    <p className="text-gray-700 text-lg">
-                      Gratulace & společné fotografování
-                    </p>
+                  {/* Left side */}
+                  <div className="flex items-center gap-8">
+                    <div className="flex-1 text-right pr-8">
+                      <div className="text-gray-900 font-bold text-lg mb-1 tracking-wide font-bodoni-moda">
+                        11:30–13:00
+                      </div>
+                      <div className="text-gray-600 uppercase text-sm tracking-wider font-bodoni-moda">
+                        Gratulace & společné fotografování
+                      </div>
+                    </div>
+                    <div className="relative z-10">
+                      <div className="w-3 h-3 bg-gray-900 rounded-full"></div>
+                    </div>
+                    <div className="flex-1 pl-8"></div>
                   </div>
-                </div>
 
-                <div className="grid grid-cols-[auto_1fr] gap-6 items-center py-6 border-b border-orange-200/50">
-                  <span className="text-orange-600 font-semibold text-lg text-right whitespace-nowrap">
-                    13:00–14:00
-                  </span>
-                  <div className="flex items-center gap-4">
-                    <span className="text-orange-300">•</span>
-                    <p className="text-gray-700 text-lg">Oběd</p>
+                  {/* Right side */}
+                  <div className="flex items-center gap-8">
+                    <div className="flex-1 pr-8"></div>
+                    <div className="relative z-10">
+                      <div className="w-3 h-3 bg-gray-900 rounded-full"></div>
+                    </div>
+                    <div className="flex-1 text-left pl-8">
+                      <div className="text-gray-900 font-bold text-lg mb-1 tracking-wide font-bodoni-moda">
+                        13:00–14:00
+                      </div>
+                      <div className="text-gray-600 uppercase text-sm tracking-wider font-bodoni-moda">
+                        Oběd
+                      </div>
+                    </div>
                   </div>
-                </div>
 
-                <div className="grid grid-cols-[auto_1fr] gap-6 items-center py-6 border-b border-orange-200/50">
-                  <span className="text-orange-600 font-semibold text-lg text-right whitespace-nowrap">
-                    14:00–17:00
-                  </span>
-                  <div className="flex items-center gap-4">
-                    <span className="text-orange-300">•</span>
-                    <p className="text-gray-700 text-lg">Dort, káva a zábava</p>
+                  {/* Left side */}
+                  <div className="flex items-center gap-8">
+                    <div className="flex-1 text-right pr-8">
+                      <div className="text-gray-900 font-bold text-lg mb-1 tracking-wide font-bodoni-moda">
+                        14:00–17:00
+                      </div>
+                      <div className="text-gray-600 uppercase text-sm tracking-wider font-bodoni-moda">
+                        Dort, káva a zábava
+                      </div>
+                    </div>
+                    <div className="relative z-10">
+                      <div className="w-3 h-3 bg-gray-900 rounded-full"></div>
+                    </div>
+                    <div className="flex-1 pl-8"></div>
                   </div>
-                </div>
 
-                <div className="grid grid-cols-[auto_1fr] gap-6 items-center py-6 border-b border-orange-200/50">
-                  <span className="text-orange-600 font-semibold text-lg text-right whitespace-nowrap">
-                    17:00–18:30
-                  </span>
-                  <div className="flex items-center gap-4">
-                    <span className="text-orange-300">•</span>
-                    <p className="text-gray-700 text-lg">
-                      Lehké občerstvení, raut
-                    </p>
+                  {/* Right side */}
+                  <div className="flex items-center gap-8">
+                    <div className="flex-1 pr-8"></div>
+                    <div className="relative z-10">
+                      <div className="w-3 h-3 bg-gray-900 rounded-full"></div>
+                    </div>
+                    <div className="flex-1 text-left pl-8">
+                      <div className="text-gray-900 font-bold text-lg mb-1 tracking-wide font-bodoni-moda">
+                        17:00–18:30
+                      </div>
+                      <div className="text-gray-600 uppercase text-sm tracking-wider font-bodoni-moda">
+                        Lehké občerstvení, raut
+                      </div>
+                    </div>
                   </div>
-                </div>
 
-                <div className="grid grid-cols-[auto_1fr] gap-6 items-center py-6 border-b border-orange-200/50">
-                  <span className="text-orange-600 font-semibold text-lg text-right whitespace-nowrap">
-                    18:30–19:00
-                  </span>
-                  <div className="flex items-center gap-4">
-                    <span className="text-orange-300">•</span>
-                    <p className="text-gray-700 text-lg">
-                      První tanec a zahájení večera
-                    </p>
+                  {/* Left side */}
+                  <div className="flex items-center gap-8">
+                    <div className="flex-1 text-right pr-8">
+                      <div className="text-gray-900 font-bold text-lg mb-1 tracking-wide font-bodoni-moda">
+                        18:30–19:00
+                      </div>
+                      <div className="text-gray-600 uppercase text-sm tracking-wider font-bodoni-moda">
+                        První tanec a zahájení večera
+                      </div>
+                    </div>
+                    <div className="relative z-10">
+                      <div className="w-3 h-3 bg-gray-900 rounded-full"></div>
+                    </div>
+                    <div className="flex-1 pl-8"></div>
                   </div>
-                </div>
 
-                <div className="grid grid-cols-[auto_1fr] gap-6 items-center py-6">
-                  <span className="text-orange-600 font-semibold text-lg text-right whitespace-nowrap">
-                    19:00+
-                  </span>
-                  <div className="flex items-center gap-4">
-                    <span className="text-orange-300">•</span>
-                    <p className="text-gray-700 text-lg">Večerní zábava</p>
+                  {/* Right side */}
+                  <div className="flex items-center gap-8">
+                    <div className="flex-1 pr-8"></div>
+                    <div className="relative z-10">
+                      <div className="w-3 h-3 bg-gray-900 rounded-full"></div>
+                    </div>
+                    <div className="flex-1 text-left pl-8">
+                      <div className="text-gray-900 font-bold text-lg mb-1 tracking-wide font-bodoni-moda">
+                        19:00+
+                      </div>
+                      <div className="text-gray-600 uppercase text-sm tracking-wider font-bodoni-moda">
+                        Večerní zábava
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -407,427 +419,273 @@ export default function WeddingPage() {
         </section>
 
         {/* Travel */}
-        <section id="doprava" className="py-24 bg-gray-100">
+        <section id="doprava" className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <div className="flex items-center justify-center mb-12">
-              <div className="h-px w-16 bg-gradient-to-r from-transparent via-[#ea580c] to-transparent"></div>
-              <div className="flex flex-col items-center mx-6">
-                <h2 className="text-4xl font-serif font-semibold tracking-tight text-gray-900 mb-2">
-                  Doprava a ubytování
-                </h2>
-              </div>
-              <div className="h-px w-16 bg-gradient-to-r from-transparent via-[#ea580c] to-transparent"></div>
-            </div>
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bodoni-moda font-bold text-gray-900 mb-12">
+                Doprava a ubytování
+              </h2>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <Card className="p-8 bg-stone-50/30 border-l-4 border-orange-300 shadow-sm h-full">
-                <div className="flex items-center mb-6">
-                  <Car className="h-6 w-6 text-orange-600 mr-3" />
-                  <h3 className="text-xl font-serif font-light tracking-wide text-gray-700">
+              <div className="space-y-4">
+                {/* Doprava */}
+                <div className="border border-gray-200 bg-zinc-50 p-6 rounded-xl">
+                  <h3 className="text-xl font-bodoni-moda font-bold text-gray-900 mb-3">
                     Doprava
                   </h3>
+                  <div className="space-y-2 text-gray-700 leading-relaxed font-bodoni-moda">
+                    <p>
+                      Smrčiny jsou lehce dostupné autem. Parkování je možné na
+                      místě.
+                    </p>
+                    <p>
+                      Prosíme o příjezd v dostatečném předstihu, aby obřad mohl
+                      proběhnout bez zpoždění.
+                    </p>
+                  </div>
                 </div>
-                <p className="mb-4 text-gray-700/70">
-                  Smrčiny jsou lehce dostupné autem. Parkování je možné na
-                  místě.
-                </p>
-                <p className="mb-4 text-gray-700/70">
-                  Prosíme o příjezd v dostatečném předstihu, aby obřad mohl
-                  proběhnout bez zpoždění.
-                </p>
-              </Card>
 
-              <Card className="p-8 bg-stone-50/30 border-l-4 border-orange-300 shadow-sm h-full">
-                <div className="flex items-center mb-6">
-                  <Users className="h-6 w-6 text-orange-600 mr-3" />
-                  <h3 className="text-xl font-serif font-light tracking-wide text-gray-700">
+                {/* Předsvatební setkání */}
+                <div className="border border-gray-200 bg-zinc-50 p-6 rounded-xl">
+                  <h3 className="text-xl font-bodoni-moda font-bold text-gray-900 mb-3">
                     Předsvatební setkání
                   </h3>
+                  <div className="space-y-2 text-gray-700 leading-relaxed font-bodoni-moda">
+                    <p>
+                      Zveme vás na neformální opékání buřtů a večerní setkání
+                      den před svatbou – 29. 5. od 18:00 v areálu Smrčin. Akce
+                      je určena pro hosty, kteří přijedou dříve, a bude skvělou
+                      příležitostí se seznámit a užít si společný čas před
+                      svatebním dnem.
+                    </p>
+                    <p>
+                      Prosíme, potvrďte svou účast v RSVP, abychom s Vámi mohli
+                      počítat.
+                    </p>
+                  </div>
                 </div>
-                <p className="mb-4 text-gray-700/70">
-                  Zveme vás na neformální opékání buřtů a večerní setkání den
-                  před svatbou – 29. 5. od 18:00 v areálu Smrčin. Akce je určena
-                  pro hosty, kteří přijedou dříve, a bude skvělou příležitostí
-                  se seznámit a užít si společný čas před svatebním dnem.
-                </p>
-                <p className="text-gray-700/70">
-                  Prosíme, potvrďte svou účast v RSVP, abychom s Vámi mohli
-                  počítat.
-                </p>
-              </Card>
-            </div>
 
-            <div className="mt-8 max-w-4xl mx-auto">
-              <Card className="p-8 bg-stone-50/30 border-l-4 border-orange-300 shadow-sm">
-                <div className="flex items-center mb-6">
-                  <MapPin className="h-6 w-6 text-orange-600 mr-3" />
-                  <h3 className="text-xl font-serif font-light tracking-wide text-gray-700">
+                {/* Ubytování */}
+                <div className="border border-gray-200 bg-zinc-50 p-6 rounded-xl">
+                  <h3 className="text-xl font-bodoni-moda font-bold text-gray-900 mb-3">
                     Ubytování
                   </h3>
+                  <div className="space-y-2 text-gray-700 leading-relaxed font-bodoni-moda">
+                    <p>
+                      Máme k dispozici ubytování přímo na Smrčinách, kde se
+                      svatba koná. Budeme rádi, pokud nám dáte vědět, zda byste
+                      tuto možnost využili.
+                    </p>
+                    <p>
+                      Ubytování na Smrčinách bychom chtěli spíše dopřát těm,
+                      kteří k nám pojedou z větší dálky a nebudou moci cestovat
+                      zpět domů po svatbě. Pro ostatní z okolí bude zajištěn
+                      odvoz.
+                    </p>
+                    <p>
+                      Upozorňujeme, že většina pokojů je minimálně pro 3–4
+                      osoby, a pokud by někdo nechtěl sdílet pokoj s někým
+                      dalším, můžeme doporučit ubytování v Želivě.
+                    </p>
+                    <div className="mt-3 pt-3 border-t border-gray-300 font-bodoni-moda">
+                      <p>
+                        <strong className="font-bold text-gray-900 font-bodoni-moda">
+                          Jak nám dát vědět:
+                        </strong>{' '}
+                        Své preference ohledně ubytování uveďte prosím v RSVP
+                        formuláři nebo nám napište přímo. Rádi vám pomůžeme s
+                        organizací!
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <p className="mb-6 text-gray-600">
-                  Máme k dispozici ubytování přímo na Smrčinách, kde se svatba
-                  koná. Budeme rádi, pokud nám dáte vědět, zda byste tuto
-                  možnost využili.
-                </p>
-
-                <p className="mb-6 text-gray-600">
-                  Ubytování na Smrčinách bychom chtěli spíše dopřát těm, kteří k
-                  nám pojedou z větší dálky a nebudou moci cestovat zpět domů po
-                  svatbě. Pro ostatní z okolí bude zajištěn odvoz.
-                </p>
-
-                <p className="mb-6 text-gray-600">
-                  Upozorňujeme, že většina pokojů je minimálně pro 3–4 osoby, a
-                  pokud by někdo nechtěl sdílet pokoj s někým dalším, můžeme
-                  doporučit ubytování v Želivě.
-                </p>
-
-                <div className="mt-6 text-center">
-                  <p className="text-gray-700">
-                    <strong className="font-semibold text-orange-600 bg-orange-50 px-2 py-1 rounded">
-                      Jak nám dát vědět:
-                    </strong>{' '}
-                    Své preference ohledně ubytování uveďte prosím v RSVP
-                    formuláři nebo nám napište přímo. Rádi vám pomůžeme s
-                    organizací!
-                  </p>
-                </div>
-              </Card>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Dress Code */}
-        <section
-          id="dress-code"
-          className="py-24 bg-gray-50 relative overflow-hidden"
-        >
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="flex items-center justify-center mb-12">
-              <div className="h-px w-16 bg-gradient-to-r from-transparent via-[#ea580c] to-transparent"></div>
-              <div className="flex flex-col items-center mx-6">
-                <h2 className="text-4xl font-serif font-semibold tracking-tight text-gray-900 mb-2">
-                  Dress Code
-                </h2>
-              </div>
-              <div className="h-px w-16 bg-gradient-to-r from-transparent via-[#ea580c] to-transparent"></div>
-            </div>
-
+        <section id="dress-code" className="py-16 bg-zinc-50">
+          <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <Card className="overflow-hidden bg-stone-50/30 border-l-4 border-orange-300 shadow-sm">
-                <div className="md:grid md:grid-cols-2">
-                  <div className="p-8">
-                    <div className="flex items-center mb-6">
-                      <Shirt className="h-6 w-6 text-orange-600 mr-3 flex-shrink-0" />
-                      <h3 className="text-xl font-serif font-medium tracking-wide text-gray-700">
-                        Formální elegance
-                      </h3>
-                    </div>
+              <h2 className="text-3xl md:text-4xl font-bodoni-moda font-bold text-gray-900 mb-12">
+                Dress Code
+              </h2>
 
-                    <p className="mb-8 text-gray-700/80 leading-relaxed">
+              <div className="md:grid md:grid-cols-2 gap-8">
+                <div className="space-y-4">
+                  <div className="border border-gray-200 bg-white p-6 rounded-xl">
+                    <h3 className="text-xl font-bodoni-moda font-bold text-gray-900 mb-3">
+                      Formální elegance
+                    </h3>
+                    <p className="text-gray-700 leading-relaxed font-bodoni-moda">
                       Prosíme Vás o formální oblečení odpovídající slavnostní
                       příležitosti. Pánové oblek, dámy šaty nebo kostýmek.
                     </p>
-
-                    <div className="space-y-6">
-                      <div>
-                        <h4 className="font-serif font-medium mb-3 text-gray-700">
-                          Barvy
-                        </h4>
-                        <p className="text-gray-700/80 leading-relaxed">
-                          Preferujeme pastelové barvy, které budou ladit s
-                          celkovou atmosférou svatby.
-                        </p>
-                      </div>
-
-                      <div>
-                        <h4 className="font-serif font-medium mb-3 text-gray-700">
-                          Prosíme vyhnout se
-                        </h4>
-                        <div className="bg-white/50 p-4 rounded-lg">
-                          <ul className="space-y-2 text-sm text-gray-700/70">
-                            <li className="flex items-start">
-                              <span className="w-2 h-2 bg-orange-600 rounded-full mr-3 mt-1.5 flex-shrink-0"></span>
-                              <span>
-                                Čistě bílé oblečení (vyhrazeno pro nevěstu)
-                              </span>
-                            </li>
-                            <li className="flex items-start">
-                              <span className="w-2 h-2 bg-orange-600 rounded-full mr-3 mt-1.5 flex-shrink-0"></span>
-                              <span>Příliš výrazným a zářivým barvám</span>
-                            </li>
-                            <li className="flex items-start">
-                              <span className="w-2 h-2 bg-orange-600 rounded-full mr-3 mt-1.5 flex-shrink-0"></span>
-                              <span>Džínám a neformálnímu oblečení</span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
                   </div>
 
-                  <div className="relative bg-orange-50">
-                    <div className="h-full flex items-center justify-center p-8">
-                      <div className="text-center">
-                        <div className="mx-auto mb-6 bg-white/30 backdrop-blur-sm rounded-2xl p-3 shadow-xl w-72">
-                          <Image
-                            src="/dress-code.png"
-                            alt="Dress code illustration"
-                            width={288}
-                            height={288}
-                            className="w-full h-auto object-contain rounded-lg"
-                          />
-                        </div>
-                        <h4 className="text-lg font-script text-orange-600">
-                          Elegant & Timeless
-                        </h4>
-                      </div>
+                  <div className="border border-gray-200 bg-white p-6 rounded-xl">
+                    <h3 className="text-xl font-bodoni-moda font-bold text-gray-900 mb-3">
+                      Barvy
+                    </h3>
+                    <p className="text-gray-700 leading-relaxed font-bodoni-moda">
+                      Preferujeme pastelové barvy, které budou ladit s celkovou
+                      atmosférou svatby.
+                    </p>
+                  </div>
+
+                  <div className="border border-gray-200 bg-white p-6 rounded-xl">
+                    <h3 className="text-xl font-bodoni-moda font-bold text-gray-900 mb-3">
+                      Prosíme vyhnout se
+                    </h3>
+                    <div className="space-y-2 text-gray-700 leading-relaxed font-bodoni-moda">
+                      <p>Čistě bílé oblečení (vyhrazeno pro nevěstu)</p>
+                      <p>Příliš výrazným a zářivým barvám</p>
+                      <p>Džínám a neformálnímu oblečení</p>
                     </div>
                   </div>
                 </div>
-              </Card>
+
+                <div className="mt-8 md:mt-0 flex items-center justify-center">
+                  <div className="text-center">
+                    <Image
+                      src="/dress-code.png"
+                      alt="Dress code illustration"
+                      width={288}
+                      height={288}
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Seating Chart */}
-        {/* <section id="zasedaci-poradek" className="py-24 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="flex items-center justify-center mb-12">
-              <div className="h-px w-12 bg-orange-600"></div>
-              <h2 className="text-3xl font-medium mx-4 tracking-wide text-[#986b50]">
-                Zasedací pořádek
-              </h2>
-              <div className="h-px w-12 bg-orange-600"></div>
-            </div>
-
-            <div className="max-w-4xl mx-auto">
-              <Card className="p-8 bg-transparent border-none shadow-none/90 backdrop-blur-sm">
-                <SeatingChart />
-              </Card>
-            </div>
-          </div>
-        </section> */}
-
         {/* RSVP */}
-        <section id="rsvp" className="py-24 bg-gray-100">
+        <section id="rsvp" className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <div className="flex items-center justify-center mb-12">
-              <div className="h-px w-16 bg-gradient-to-r from-transparent via-[#ea580c] to-transparent"></div>
-              <div className="flex flex-col items-center mx-6">
-                <h2 className="text-4xl font-serif font-semibold tracking-tight text-gray-900 mb-2">
-                  RSVP
-                </h2>
-              </div>
-              <div className="h-px w-16 bg-gradient-to-r from-transparent via-[#ea580c] to-transparent"></div>
-            </div>
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bodoni-moda font-bold text-gray-900 mb-12">
+                RSVP
+              </h2>
 
-            <div className="max-w-2xl mx-auto">
               {isSubmitted ? (
-                <Card
+                <div
                   ref={thankYouCardRef}
-                  className="bg-stone-50/30 border-l-4 border-orange-300 shadow-sm"
+                  className="border border-gray-200 bg-zinc-50 p-8 rounded-xl"
                 >
-                  <div className="p-8 text-center">
-                    <h2 className="text-2xl font-serif font-bold mb-4 text-gray-700">
+                  <div className="text-center">
+                    <h3 className="text-2xl font-bodoni-moda font-bold mb-4 text-gray-900">
                       Děkujeme!
-                    </h2>
-                    <p className="text-gray-700/80">
+                    </h3>
+                    <p className="text-gray-700 leading-relaxed">
                       Vaše RSVP bylo úspěšně odesláno. Těšíme se na vás!
                     </p>
                   </div>
-                </Card>
+                </div>
               ) : (
-                <Card className="bg-stone-50/30 border-l-4 border-orange-300 shadow-sm">
-                  <div className="p-8">
-                    <div className="mb-8 text-center">
-                      <p className="text-gray-700">
+                <div className="grid md:grid-cols-3 gap-8">
+                  <div className="md:col-span-2">
+                    <div className="border border-gray-200 bg-zinc-50 p-6 rounded-xl">
+                      <RsvpForm onSubmit={() => setIsSubmitted(true)} />
+                    </div>
+                  </div>
+
+                  <div className="md:col-span-1">
+                    <div className="border border-gray-200 bg-zinc-50 p-6 rounded-xl">
+                      <h3 className="text-xl font-bodoni-moda font-bold text-gray-900 mb-3">
+                        Termín potvrzení
+                      </h3>
+                      <p className="text-gray-700 leading-relaxed font-bodoni-moda">
                         Prosíme o potvrzení vaší účasti do{' '}
-                        <span className="font-semibold text-orange-600 bg-orange-50 px-2 py-1 rounded">
-                          1. března 2026
+                        <span className="font-bold text-gray-900 font-bodoni-moda">
+                          konce března.
                         </span>
-                        .
                       </p>
                     </div>
-                    <RsvpForm onSubmit={() => setIsSubmitted(true)} />
                   </div>
-                </Card>
+                </div>
               )}
             </div>
           </div>
         </section>
 
         {/* Contacts */}
-        <section id="kontakty" className="py-24 bg-gray-50">
+        <section id="kontakty" className="py-16 bg-zinc-50">
           <div className="container mx-auto px-4">
-            <div className="flex items-center justify-center mb-12">
-              <div className="h-px w-16 bg-gradient-to-r from-transparent via-[#ea580c] to-transparent"></div>
-              <div className="flex flex-col items-center mx-6">
-                <h2 className="text-4xl font-serif font-semibold tracking-tight text-gray-900 mb-2">
-                  Kontakty
-                </h2>
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bodoni-moda font-bold text-gray-900 mb-8">
+                Kontakty
+              </h2>
+
+              <div className="mb-8">
+                <p className="text-lg font-bodoni-moda font-bold text-gray-900 mb-2">
+                  Potřebujete pomoct?
+                </p>
+                <p className="text-gray-700 leading-relaxed font-bodoni-moda">
+                  Pokud máte jakékoli dotazy ohledně svatby nebo vyplnění
+                  formuláře, neváhejte nás kontaktovat.
+                </p>
               </div>
-              <div className="h-px w-16 bg-gradient-to-r from-transparent via-[#ea580c] to-transparent"></div>
-            </div>
 
-            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <Card className="p-6 bg-stone-50/30 border-l-4 border-orange-300 shadow-sm">
-                <div className="text-center mb-4">
-                  <div className="h-16 w-16 rounded-full bg-white mx-auto flex items-center justify-center">
-                    <span className="text-2xl font-light text-orange-600">
-                      J
-                    </span>
+              <div className="grid md:grid-cols-3 gap-4">
+                <div className="border border-gray-200 bg-white p-4 rounded-xl">
+                  <h3 className="text-lg font-bodoni-moda font-bold text-gray-900 mb-3">
+                    Ženich
+                  </h3>
+                  <div className="space-y-2 text-sm">
+                    <div>
+                      <p className="text-gray-900 font-bodoni-moda">
+                        +420 731 288 826
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-gray-900 font-bodoni-moda">
+                        jmares.mail@gmail.com
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <h3 className="text-xl font-serif font-light mb-4 text-center tracking-wide">
-                  Ženich
-                </h3>
-                <div className="flex items-center mb-3 justify-center">
-                  <Phone className="h-5 w-5 text-orange-600 mr-3" />
-                  <p className="text-gray-700/70">+420 731 288 826</p>
-                </div>
-                <div className="flex items-center justify-center">
-                  <Mail className="h-5 w-5 text-orange-600 mr-3" />
-                  <p className="text-gray-700/70">jmares.mail@gmail.com</p>
-                </div>
-              </Card>
 
-              <Card className="p-6 bg-stone-50/30 border-l-4 border-orange-300 shadow-sm">
-                <div className="text-center mb-4">
-                  <div className="h-16 w-16 rounded-full bg-white mx-auto flex items-center justify-center">
-                    <span className="text-2xl font-light text-orange-600">
-                      T
-                    </span>
+                <div className="border border-gray-200 bg-white p-4 rounded-xl">
+                  <h3 className="text-lg font-bodoni-moda font-bold text-gray-900 mb-3">
+                    Nevěsta
+                  </h3>
+                  <div className="space-y-2 text-sm">
+                    <div>
+                      <p className="text-gray-900 font-bodoni-moda">
+                        +420 604 335 462
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-gray-900 font-bodoni-moda">
+                        tereza.zav@gmail.com
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <h3 className="text-xl font-serif font-light mb-4 text-center tracking-wide">
-                  Nevěsta
-                </h3>
-                <div className="flex items-center mb-3 justify-center">
-                  <Phone className="h-5 w-5 text-orange-600 mr-3" />
-                  <p className="text-gray-700/70">+420 604 335 462</p>
-                </div>
-                <div className="flex items-center justify-center">
-                  <Mail className="h-5 w-5 text-orange-600 mr-3" />
-                  <p className="text-gray-700/70">tereza.zav@gmail.com</p>
-                </div>
-              </Card>
 
-              <Card className="p-6 bg-stone-50/30 border-l-4 border-orange-300 shadow-sm">
-                <div className="text-center mb-4">
-                  <div className="h-16 w-16 rounded-full bg-white mx-auto flex items-center justify-center">
-                    <Car className="h-8 w-8 text-orange-600" />
+                <div className="border border-gray-200 bg-white p-4 rounded-xl">
+                  <h3 className="text-lg font-bodoni-moda font-bold text-gray-900 mb-3">
+                    Řidič
+                  </h3>
+                  <div className="space-y-2 text-sm">
+                    <div>
+                      <p className="text-gray-900 font-bodoni-moda">
+                        Bude doplněn
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-gray-900 font-bodoni-moda">
+                        K dispozici celý den
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <h3 className="text-xl font-serif font-light mb-4 text-center tracking-wide">
-                  Řidič
-                </h3>
-                <div className="flex items-center mb-3 justify-center">
-                  <Phone className="h-5 w-5 text-orange-600 mr-3" />
-                  <p className="text-gray-700/70">Bude doplněn</p>
-                </div>
-                <div className="flex items-center justify-center">
-                  <Clock className="h-5 w-5 text-orange-600 mr-3" />
-                  <p className="text-gray-700/70">K dispozici celý den</p>
-                </div>
-              </Card>
+              </div>
             </div>
           </div>
         </section>
-
-        {/* FAQ */}
-        {/* <section id="faq" className="py-24 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="flex items-center justify-center mb-12">
-              <div className="h-px w-12 bg-orange-600"></div>
-              <h2 className="text-3xl font-medium mx-4 tracking-wide text-[#986b50]">
-                Často kladené otázky
-              </h2>
-              <div className="h-px w-12 bg-orange-600"></div>
-            </div>
-
-            <div className="max-w-3xl mx-auto">
-              <Card className="p-8 bg-transparent border-none shadow-none/90 backdrop-blur-sm">
-                <Accordion type="single" collapsible className="w-full">
-                  <AccordionItem
-                    value="item-1"
-                    className="border-b border-[#cfb263]/20"
-                  >
-                    <AccordionTrigger className="text-lg font-light tracking-wide hover:text-orange-600">
-                      Mohu přivést s sebou děti?
-                    </AccordionTrigger>
-                    <AccordionContent className="text-gray-700/70">
-                      Ano, děti jsou na naší svatbě vítány. Bude pro ně
-                      připraven dětský koutek.
-                    </AccordionContent>
-                  </AccordionItem>
-
-                  <AccordionItem
-                    value="item-2"
-                    className="border-b border-[#cfb263]/20"
-                  >
-                    <AccordionTrigger className="text-lg font-light tracking-wide hover:text-orange-600">
-                      Bude k dispozici vegetariánské jídlo?
-                    </AccordionTrigger>
-                    <AccordionContent className="text-gray-700/70">
-                      Ano, vegetariánská varianta menu bude k dispozici.
-                      Prosíme, uveďte své stravovací preference v RSVP
-                      formuláři.
-                    </AccordionContent>
-                  </AccordionItem>
-
-                  <AccordionItem
-                    value="item-3"
-                    className="border-b border-[#cfb263]/20"
-                  >
-                    <AccordionTrigger className="text-lg font-light tracking-wide hover:text-orange-600">
-                      Jak je to s dary?
-                    </AccordionTrigger>
-                    <AccordionContent className="text-gray-700/70">
-                      Vaše přítomnost je pro nás tím nejkrásnějším darem. Pokud
-                      byste nás přesto chtěli obdarovat, nejvíce oceníme
-                      příspěvek na naši svatební cestu.
-                    </AccordionContent>
-                  </AccordionItem>
-
-                  <AccordionItem value="item-4">
-                    <AccordionTrigger className="text-lg font-light tracking-wide hover:text-orange-600">
-                      Bude svatba venku nebo uvnitř?
-                    </AccordionTrigger>
-                    <AccordionContent className="text-gray-700/70">
-                      Obřad se bude venku v zahradě Smrčin. V případě špatného
-                      počasí máme i náhradní variantu. Zbytek programe bude v
-                      uzavřené místnosti ale za pěkného počasí je k dispozici
-                      celý rozlehlý areál.
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
-              </Card>
-            </div>
-          </div>
-        </section> */}
-
-        {/* Scroll to top button */}
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="fixed bottom-8 right-8 bg-orange-600 hover:bg-orange-700 hover:scale-110 text-white p-3 rounded-full shadow-xl transition-all duration-300 z-40"
-          aria-label="Scroll to top"
-        >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M5 10l7-7m0 0l7 7m-7-7v18"
-            />
-          </svg>
-        </button>
       </main>
     </div>
   );

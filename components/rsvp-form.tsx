@@ -20,8 +20,8 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
     email: '',
     phone: '',
     attendance: 'yes',
-    guests: 0,
-    children: 0,
+    guests: '',
+    children: '',
     dietaryRestrictions: '',
     preWeddingEvent: false,
     accommodation: false,
@@ -62,8 +62,8 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
           formData.attendance === 'yes'
             ? 'Ano, s radostí přijdu'
             : 'Ne, bohužel se nemohu zúčastnit',
-        guests: formData.guests,
-        children: formData.children,
+        guests: formData.guests || '0',
+        children: formData.children || '0',
         dietary_restrictions: formData.dietaryRestrictions || 'Žádné',
         pre_wedding_event: formData.preWeddingEvent ? 'Ano' : 'Ne',
         accommodation: formData.accommodation ? 'Ano' : 'Ne',
@@ -90,11 +90,13 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      {/* Form fields */}
+    <form onSubmit={handleSubmit} className="space-y-5">
       <div className="space-y-4">
         <div>
-          <Label htmlFor="name" className="text-sm font-medium">
+          <Label
+            htmlFor="name"
+            className="text-sm font-semibold text-gray-900 font-bodoni-moda"
+          >
             Jméno a příjmení
           </Label>
           <Input
@@ -103,55 +105,71 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
             value={formData.name}
             onChange={handleChange}
             required
-            className="mt-1 bg-stone-50/50 border-orange-300/50 focus:border-orange-300 focus:ring-orange-600"
+            className="mt-2 bg-white font-bodoni-moda"
           />
         </div>
 
+        <div className="grid md:grid-cols-2 gap-4 ">
+          <div>
+            <Label
+              htmlFor="email"
+              className="text-sm font-semibold text-gray-900 font-bodoni-moda"
+            >
+              Email
+            </Label>
+            <Input
+              id="email"
+              name="email"
+              type="email"
+              value={formData.email}
+              onChange={handleChange}
+              className="mt-2 bg-white font-bodoni-moda"
+              placeholder="Nepovinné"
+            />
+          </div>
+
+          <div>
+            <Label
+              htmlFor="phone"
+              className="text-sm font-semibold text-gray-900 font-bodoni-moda"
+            >
+              Telefon
+            </Label>
+            <Input
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              className="mt-2 bg-white font-bodoni-moda"
+              placeholder="Nepovinné"
+            />
+          </div>
+        </div>
+
         <div>
-          <Label htmlFor="email" className="text-sm font-medium">
-            Email
+          <Label className="text-sm font-semibold text-gray-900 font-bodoni-moda">
+            Zúčastníte se?
           </Label>
-          <Input
-            id="email"
-            name="email"
-            type="email"
-            value={formData.email}
-            onChange={handleChange}
-            className="mt-1 bg-stone-50/50 border-orange-300/50 focus:border-orange-300 focus:ring-orange-600"
-            placeholder="Nepovinné"
-          />
-        </div>
-
-        <div>
-          <Label htmlFor="phone" className="text-sm font-medium">
-            Telefon
-          </Label>
-          <Input
-            id="phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            className="mt-1 bg-stone-50/50 border-orange-300/50 focus:border-orange-300 focus:ring-orange-600"
-            placeholder="Nepovinné"
-          />
-        </div>
-
-        <div>
-          <Label className="text-sm font-medium">Zúčastníte se?</Label>
           <RadioGroup
             value={formData.attendance}
             onValueChange={handleRadioChange}
-            className="flex flex-col space-y-1 mt-2"
+            className="flex flex-col space-y-2 mt-2 font-bodoni-moda"
           >
             <div className="flex items-center space-x-2">
-              <RadioGroupItem value="yes" id="yes" className="text-orange-600" />
-              <Label htmlFor="yes" className="text-sm">
+              <RadioGroupItem value="yes" id="yes" className="text-gray-900" />
+              <Label
+                htmlFor="yes"
+                className="text-sm text-gray-700 font-normal font-bodoni-moda"
+              >
                 Ano, s radostí přijdu
               </Label>
             </div>
             <div className="flex items-center space-x-2">
-              <RadioGroupItem value="no" id="no" className="text-orange-600" />
-              <Label htmlFor="no" className="text-sm">
+              <RadioGroupItem value="no" id="no" className="text-gray-900" />
+              <Label
+                htmlFor="no"
+                className="text-sm text-gray-700 font-normal font-bodoni-moda"
+              >
                 Ne, bohužel se nemohu zúčastnit
               </Label>
             </div>
@@ -160,40 +178,50 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
 
         {formData.attendance === 'yes' && (
           <>
-            <div>
-              <Label htmlFor="guests" className="text-sm font-medium">
-                Počet doprovázejících osob (dospělí)
-              </Label>
-              <Input
-                id="guests"
-                name="guests"
-                type="number"
-                min="0"
-                value={formData.guests}
-                onChange={handleChange}
-                className="mt-1 bg-stone-50/50 border-orange-300/50 focus:border-orange-300 focus:ring-orange-600"
-              />
-            </div>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div>
+                <Label
+                  htmlFor="guests"
+                  className="text-sm font-semibold text-gray-900 font-bodoni-moda"
+                >
+                  Dospělí
+                </Label>
+                <Input
+                  id="guests"
+                  name="guests"
+                  type="number"
+                  min="0"
+                  value={formData.guests}
+                  onChange={handleChange}
+                  placeholder="0"
+                  className="mt-2 bg-white font-bodoni-moda"
+                />
+              </div>
 
-            <div>
-              <Label htmlFor="children" className="text-sm font-medium">
-                Počet doprovázejících osob (děti)
-              </Label>
-              <Input
-                id="children"
-                name="children"
-                type="number"
-                min="0"
-                value={formData.children}
-                onChange={handleChange}
-                className="mt-1 bg-stone-50/50 border-orange-300/50 focus:border-orange-300 focus:ring-orange-600"
-              />
+              <div>
+                <Label
+                  htmlFor="children"
+                  className="text-sm font-semibold text-gray-900 font-bodoni-moda"
+                >
+                  Děti
+                </Label>
+                <Input
+                  id="children"
+                  name="children"
+                  type="number"
+                  min="0"
+                  value={formData.children}
+                  onChange={handleChange}
+                  placeholder="0"
+                  className="mt-2 bg-white font-bodoni-moda"
+                />
+              </div>
             </div>
 
             <div>
               <Label
                 htmlFor="dietaryRestrictions"
-                className="text-sm font-medium"
+                className="text-sm font-semibold text-gray-900 font-bodoni-moda"
               >
                 Stravovací omezení
               </Label>
@@ -203,50 +231,61 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
                 value={formData.dietaryRestrictions}
                 onChange={handleChange}
                 placeholder="Vegetariánská strava, alergie, apod."
-                className="mt-1 bg-stone-50/50 border-orange-300/50 focus:border-orange-300 focus:ring-orange-600"
+                className="mt-2 bg-white font-bodoni-moda"
               />
             </div>
 
-            <div className="flex items-center space-x-2">
-              <input
-                type="checkbox"
-                id="preWeddingEvent"
-                checked={formData.preWeddingEvent}
-                onChange={(e) =>
-                  setFormData((prev) => ({
-                    ...prev,
-                    preWeddingEvent: e.target.checked,
-                  }))
-                }
-                className="h-4 w-4 text-orange-600 border-orange-300/50 rounded focus:ring-[#cfb263]"
-              />
-              <Label htmlFor="preWeddingEvent" className="text-sm">
-                Zúčastním se předsvatebního setkání (29. května)
-              </Label>
-            </div>
+            <div className="space-y-3 pt-2">
+              <div className="flex items-start space-x-3">
+                <input
+                  type="checkbox"
+                  id="preWeddingEvent"
+                  checked={formData.preWeddingEvent}
+                  onChange={(e) =>
+                    setFormData((prev) => ({
+                      ...prev,
+                      preWeddingEvent: e.target.checked,
+                    }))
+                  }
+                  className="h-4 w-4 mt-0.5 text-gray-900 border-gray-300 rounded focus:ring-gray-900"
+                />
+                <Label
+                  htmlFor="preWeddingEvent"
+                  className="text-sm text-gray-700 font-normal leading-tight font-bodoni-moda"
+                >
+                  Zúčastním se předsvatebního setkání (29. května)
+                </Label>
+              </div>
 
-            <div className="flex items-center space-x-2">
-              <input
-                type="checkbox"
-                id="accommodation"
-                checked={formData.accommodation}
-                onChange={(e) =>
-                  setFormData((prev) => ({
-                    ...prev,
-                    accommodation: e.target.checked,
-                  }))
-                }
-                className="h-4 w-4 text-orange-600 border-orange-300/50 rounded focus:ring-[#cfb263]"
-              />
-              <Label htmlFor="accommodation" className="text-sm">
-                Mám zájem o ubytování přímo na Smrčinách
-              </Label>
+              <div className="flex items-start space-x-3">
+                <input
+                  type="checkbox"
+                  id="accommodation"
+                  checked={formData.accommodation}
+                  onChange={(e) =>
+                    setFormData((prev) => ({
+                      ...prev,
+                      accommodation: e.target.checked,
+                    }))
+                  }
+                  className="h-4 w-4 mt-0.5 text-gray-900 border-gray-300 rounded focus:ring-gray-900"
+                />
+                <Label
+                  htmlFor="accommodation"
+                  className="text-sm text-gray-700 font-normal leading-tight font-bodoni-moda"
+                >
+                  Mám zájem o ubytování přímo na Smrčinách
+                </Label>
+              </div>
             </div>
           </>
         )}
 
         <div>
-          <Label htmlFor="message" className="text-sm font-medium">
+          <Label
+            htmlFor="message"
+            className="text-sm font-semibold text-gray-900 font-bodoni-moda"
+          >
             Vzkaz pro novomanžele
           </Label>
           <Textarea
@@ -255,14 +294,14 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
             value={formData.message}
             onChange={handleChange}
             placeholder="Nepovinné"
-            className="mt-1 bg-stone-50/50 border-orange-300/50 focus:border-orange-300 focus:ring-orange-600"
+            className="mt-2 bg-white font-bodoni-moda"
           />
         </div>
       </div>
 
       <Button
         type="submit"
-        className="w-full bg-orange-600 hover:bg-orange-700 text-white"
+        className="w-full bg-gray-900 hover:bg-black text-white font-semibold font-bodoni-moda"
         disabled={isSubmitting}
       >
         {isSubmitting ? 'Odesílání...' : 'Odeslat RSVP'}

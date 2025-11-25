@@ -131,6 +131,7 @@ const config = {
         serif: ['var(--font-playfair)', 'Playfair Display', 'serif'],
         sans: ['var(--font-source-sans)', 'Source Sans 3', 'sans-serif'],
         script: ['var(--font-dancing-script)', 'Dancing Script', 'cursive'],
+        'bodoni-moda': ['var(--font-bodoni-moda)', 'Bodoni Moda', 'serif'],
       },
       borderRadius: {
         lg: 'var(--radius)',
