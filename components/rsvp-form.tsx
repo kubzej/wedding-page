@@ -103,7 +103,7 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
             value={formData.name}
             onChange={handleChange}
             required
-            className="mt-1 bg-[#edede9]/30 border-[#d5bdaf]/20 focus:border-[#d5bdaf] focus:ring-[#d5bdaf]"
+            className="mt-1 bg-stone-50/50 border-orange-300/50 focus:border-orange-300 focus:ring-orange-600"
           />
         </div>
 
@@ -117,7 +117,7 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
             type="email"
             value={formData.email}
             onChange={handleChange}
-            className="mt-1 bg-[#edede9]/30 border-[#d5bdaf]/20 focus:border-[#d5bdaf] focus:ring-[#d5bdaf]"
+            className="mt-1 bg-stone-50/50 border-orange-300/50 focus:border-orange-300 focus:ring-orange-600"
             placeholder="Nepovinné"
           />
         </div>
@@ -131,7 +131,7 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className="mt-1 bg-[#edede9]/30 border-[#d5bdaf]/20 focus:border-[#d5bdaf] focus:ring-[#d5bdaf]"
+            className="mt-1 bg-stone-50/50 border-orange-300/50 focus:border-orange-300 focus:ring-orange-600"
             placeholder="Nepovinné"
           />
         </div>
@@ -144,13 +144,13 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
             className="flex flex-col space-y-1 mt-2"
           >
             <div className="flex items-center space-x-2">
-              <RadioGroupItem value="yes" id="yes" className="text-[#d5bdaf]" />
+              <RadioGroupItem value="yes" id="yes" className="text-orange-600" />
               <Label htmlFor="yes" className="text-sm">
                 Ano, s radostí přijdu
               </Label>
             </div>
             <div className="flex items-center space-x-2">
-              <RadioGroupItem value="no" id="no" className="text-[#d5bdaf]" />
+              <RadioGroupItem value="no" id="no" className="text-orange-600" />
               <Label htmlFor="no" className="text-sm">
                 Ne, bohužel se nemohu zúčastnit
               </Label>
@@ -171,7 +171,7 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
                 min="0"
                 value={formData.guests}
                 onChange={handleChange}
-                className="mt-1 bg-[#edede9]/30 border-[#d5bdaf]/20 focus:border-[#d5bdaf] focus:ring-[#d5bdaf]"
+                className="mt-1 bg-stone-50/50 border-orange-300/50 focus:border-orange-300 focus:ring-orange-600"
               />
             </div>
 
@@ -186,7 +186,7 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
                 min="0"
                 value={formData.children}
                 onChange={handleChange}
-                className="mt-1 bg-[#edede9]/30 border-[#d5bdaf]/20 focus:border-[#d5bdaf] focus:ring-[#d5bdaf]"
+                className="mt-1 bg-stone-50/50 border-orange-300/50 focus:border-orange-300 focus:ring-orange-600"
               />
             </div>
 
@@ -203,7 +203,7 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
                 value={formData.dietaryRestrictions}
                 onChange={handleChange}
                 placeholder="Vegetariánská strava, alergie, apod."
-                className="mt-1 bg-[#edede9]/30 border-[#d5bdaf]/20 focus:border-[#d5bdaf] focus:ring-[#d5bdaf]"
+                className="mt-1 bg-stone-50/50 border-orange-300/50 focus:border-orange-300 focus:ring-orange-600"
               />
             </div>
 
@@ -218,7 +218,7 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
                     preWeddingEvent: e.target.checked,
                   }))
                 }
-                className="h-4 w-4 text-[#d5bdaf] border-[#d5bdaf]/50 rounded focus:ring-[#d5bdaf]"
+                className="h-4 w-4 text-orange-600 border-orange-300/50 rounded focus:ring-[#cfb263]"
               />
               <Label htmlFor="preWeddingEvent" className="text-sm">
                 Zúčastním se předsvatebního setkání (29. května)
@@ -236,7 +236,7 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
                     accommodation: e.target.checked,
                   }))
                 }
-                className="h-4 w-4 text-[#d5bdaf] border-[#d5bdaf]/50 rounded focus:ring-[#d5bdaf]"
+                className="h-4 w-4 text-orange-600 border-orange-300/50 rounded focus:ring-[#cfb263]"
               />
               <Label htmlFor="accommodation" className="text-sm">
                 Mám zájem o ubytování přímo na Smrčinách
@@ -255,14 +255,14 @@ export default function RsvpForm({ onSubmit }: RsvpFormProps) {
             value={formData.message}
             onChange={handleChange}
             placeholder="Nepovinné"
-            className="mt-1 bg-[#edede9]/30 border-[#d5bdaf]/20 focus:border-[#d5bdaf] focus:ring-[#d5bdaf]"
+            className="mt-1 bg-stone-50/50 border-orange-300/50 focus:border-orange-300 focus:ring-orange-600"
           />
         </div>
       </div>
 
       <Button
         type="submit"
-        className="w-full bg-[#d5bdaf] hover:bg-[#c5a99b] text-white"
+        className="w-full bg-orange-600 hover:bg-orange-700 text-white"
         disabled={isSubmitting}
       >
         {isSubmitting ? 'Odesílání...' : 'Odeslat RSVP'}

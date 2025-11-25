@@ -98,23 +98,23 @@ export default function SeatingChart() {
         <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
         <Input
           placeholder="Hledat hosta..."
-          className="pl-8 bg-[#edede9]/30 border-[#d5bdaf]/20 focus:border-[#d5bdaf] focus:ring-[#d5bdaf]"
+          className="pl-8 bg-[#f3ecd8]/30 border-[#cfb263]/20 focus:border-[#cfb263] focus:ring-[#cfb263]"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
       </div>
 
       <Tabs defaultValue="tables" className="w-full">
-        <TabsList className="grid w-full grid-cols-2 bg-[#edede9]/50">
+        <TabsList className="grid w-full grid-cols-2 bg-[#f3ecd8]/50">
           <TabsTrigger
             value="tables"
-            className="text-sm font-light tracking-wide data-[state=active]:bg-[#d5bdaf] data-[state=active]:text-white"
+            className="text-sm font-light tracking-wide data-[state=active]:bg-[#cfb263] data-[state=active]:text-white"
           >
             Podle stolů
           </TabsTrigger>
           <TabsTrigger
             value="map"
-            className="text-sm font-light tracking-wide data-[state=active]:bg-[#d5bdaf] data-[state=active]:text-white"
+            className="text-sm font-light tracking-wide data-[state=active]:bg-[#cfb263] data-[state=active]:text-white"
           >
             Mapa rozmístění
           </TabsTrigger>
@@ -123,7 +123,7 @@ export default function SeatingChart() {
         <TabsContent value="tables" className="mt-6">
           <div className="space-y-6">
             {filteredGuests.map((table) => (
-              <div key={table.id} className="border border-[#d5bdaf]/20 rounded-lg p-4 bg-[#edede9]/30">
+              <div key={table.id} className="border border-[#cfb263]/20 rounded-lg p-4 bg-[#f3ecd8]/30">
                 <h3 className="font-medium mb-3">{table.name}</h3>
                 <div className="grid grid-cols-2 gap-2">
                   {table.guests.map((guest, index) => (
@@ -131,7 +131,7 @@ export default function SeatingChart() {
                       key={index}
                       className={`p-2 rounded ${
                         searchTerm && guest.toLowerCase().includes(searchTerm.toLowerCase())
-                          ? "bg-[#d5bdaf]/20"
+                          ? "bg-[#cfb263]/20"
                           : "bg-white/50"
                       }`}
                     >
@@ -149,13 +149,13 @@ export default function SeatingChart() {
         </TabsContent>
 
         <TabsContent value="map" className="mt-6">
-          <div className="aspect-video relative bg-[#edede9]/30 rounded-lg overflow-hidden">
+          <div className="aspect-video relative bg-[#f3ecd8]/30 rounded-lg overflow-hidden">
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="grid grid-cols-3 gap-4 p-4 w-full max-w-2xl">
                 {tables.map((table) => (
                   <div
                     key={table.id}
-                    className="aspect-square rounded-md bg-white border-2 border-[#d5bdaf]/50 flex items-center justify-center shadow-md"
+                    className="aspect-square rounded-md bg-white border-2 border-[#cfb263]/50 flex items-center justify-center shadow-md"
                   >
                     <div className="text-center">
                       <div className="font-medium text-sm">Stůl {table.id}</div>
