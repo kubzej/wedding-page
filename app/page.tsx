@@ -172,19 +172,29 @@ export default function WeddingPage() {
 
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="relative h-[100vh] flex items-center justify-center bg-[url('/main.png')] bg-cover bg-center md:bg-center bg-[center_right_-160px]">
+        <section className="relative h-[70vh] md:h-[100vh] flex items-center justify-center">
+          {/* Background image container */}
+          <div className="absolute inset-0">
+            <Image
+              src="/main.png"
+              alt="Tereza & Jakub"
+              fill
+              priority
+              className="object-cover object-[50%_70%] md:object-center"
+            />
+          </div>
           <div className="absolute inset-0 bg-black/40"></div>
           <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-            <h1 className="font-bodoni-moda text-6xl md:text-8xl font-bold mb-6 drop-shadow-2xl">
+            <h1 className="font-bodoni-moda text-5xl md:text-8xl font-bold mb-4 md:mb-6 drop-shadow-2xl">
               Tereza & Jakub
             </h1>
 
             <div className="flex items-center justify-center">
-              <div className="h-px w-16 bg-white/40"></div>
-              <p className="text-2xl md:text-3xl font-bodoni-moda text-white/95 mx-6 drop-shadow-xl">
+              <div className="h-px w-12 md:w-16 bg-white/40"></div>
+              <p className="text-xl md:text-3xl font-bodoni-moda text-white/95 mx-4 md:mx-6 drop-shadow-xl">
                 30. května 2026
               </p>
-              <div className="h-px w-16 bg-white/40"></div>
+              <div className="h-px w-12 md:w-16 bg-white/40"></div>
             </div>
           </div>
         </section>
